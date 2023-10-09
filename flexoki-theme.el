@@ -2,6 +2,7 @@
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
+;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Author: Andrew Jose <arnav.jose@gmail.com>
 ;; Maintainer: Andrew Jose <arnav.jose@gmail.com>
 ;; URL: https://github.com/crmsnbleyd/flexoki-emacs-theme
@@ -10,22 +11,25 @@
 
 ;; This file is NOT part of GNU Emacs.
 
-;; GNU Emacs is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-;;
-;; GNU Emacs is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
-
 ;;; Commentary:
 ;;
-;; The `flexoki-themes' are a pair of light and dark themes for GNU
+;; The `flexoki-theme' is a pair of light and dark themes for GNU
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
+(defgroup flexoki-theme ()
+  "Inky themes for prose and code."
+  :group 'faces
+  :link '(info-link "(flexoki-theme) Top")
+  :link '(url-link
+	  :tag "Homepage"
+	  "https://github.com/crmsnbleyd/flexoki-emacs-theme")
+  :prefix "flexoki-theme-"
+  :tag "Flexoki Theme")
+
+(defconst flexoki-theme-collection
+  '(flexoki-theme-dark flexoki-theme-light)
+  "Symbols of the flexoki themes")
+
+(provide 'flexoki-theme)
+;;; flexoki-theme.el ends here
