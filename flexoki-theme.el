@@ -1,6 +1,6 @@
 ;;; flexoki-theme.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
 
-;; Copyright (C) 2023  Andrew Jose
+;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
 ;; Author: Andrew Jose <arnav.jose@gmail.com>
 ;; Maintainer: Andrew Jose <arnav.jose@gmail.com>
