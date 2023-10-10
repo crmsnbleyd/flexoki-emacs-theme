@@ -1,4 +1,4 @@
-;;; flexoki-themes.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
+;;; flexoki-theme.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
@@ -305,7 +305,7 @@
 
 ;;;;;; Vertico
      `(vertico-current
-       ((t (:weight bold :background ,flexoki-highlight))))
+       ((t (:weight bold :background ,flexoki-lowlight))))
      `(vertico-group-separator
        ((t (:foreground ,flexoki-ultralight :strike-through t))))
      `(vertico-multiline
@@ -372,7 +372,7 @@
      `(magit-header-line-log-select
        ((t (:foreground ,flexoki-fg :background ,flexoki-highlight))))
      `(magit-section-heading
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-meek :height 1.2))))
      `(magit-dimmed
        ((t (:foreground ,flexoki-meek))))
      `(magit-blame-dimmed
@@ -405,6 +405,17 @@
        ((t (:foreground ,flexoki-yellow))))
      `(rainbow-delimiters-unmatched-face
        ((t (:background ,flexoki-bg :foreground ,flexoki-red :weight bold))))
+
+;;;;;; Outline
+     `(outline-minor-0      ((t (:background ,lambda-lowlight :height 1.1))))
+     `(outline-1            ((t (:inherit 'default :height 1.5 :foreground ,lambda-blue))))
+     `(outline-2            ((t (:inherit 'default :height 1.3 :foreground ,lambda-purple))))
+     `(outline-3            ((t (:inherit 'default :height 1.1 :foreground ,lambda-orange))))
+     `(outline-4            ((t (:inherit 'default :foreground ,lambda-magenta))))
+     `(outline-5            ((t (:inherit 'default :foreground ,lambda-green))))
+     `(outline-6            ((t (:inherit outline-1 :height 1))))
+     `(outline-7            ((t (:inherit outline-2 :height 1))))
+     `(outline-8            ((t (:inherit outline-3 :height 1))))
 
 ;;;;;; Eshell
      `(eshell-prompt
