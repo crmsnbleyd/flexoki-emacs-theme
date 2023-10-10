@@ -274,6 +274,22 @@
        ((,class (:foreground ,flexoki-black :background ,flexoki-yellow))))
      `(company-echo-common
        ((,class (:foreground ,flexoki-red))))
+
+;;;;;; Corfu
+     `(corfu-annotations
+       ((,class (:foreground ,flexoki-faint-bg))))
+     `(corfu-bar
+       ((,class (:foreground ,flexoki-ultralight))))
+     `(corfu-border
+       ((,class (:foreground ,flexoki-faint-bg))))
+     `(corfu-current
+       ((,class (:foreground ,flexoki-yellow :background ,flexoki-highlight))))
+     `(corfu-default
+       ((,class (:inherit default :background ,flexoki-faint))))
+     `(corfu-deprecated
+       ((,class (:foreground ,flexoki-highlight))))
+     `(corfu-echo
+       ((,class (:inherit default))))
      )))
 
 (provide 'flexoki-theme)
