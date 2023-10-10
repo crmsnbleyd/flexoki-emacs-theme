@@ -1,4 +1,4 @@
-;;; flexoki-theme.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
+;;; flexoki-themes.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
@@ -174,7 +174,7 @@
      `(link
        ((t
 	 (:background ,flexoki-lowlight
-	  :foreground ,flexoki-fg
+	  :foreground ,flexoki-blue
 	  :weight semi-bold
 	  :underline t))))
      `(shadow
