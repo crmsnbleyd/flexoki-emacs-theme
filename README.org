@@ -1,5 +1,5 @@
 This repository contains emacs versions of the dark and light flexoki theme by Steph Ango, available at
-[[stephango.com/flexoki]]
+[[https://stephango.com/flexoki]]
 
 This theme is only available on this repository for now.
 
