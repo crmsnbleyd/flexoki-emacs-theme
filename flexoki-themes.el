@@ -295,7 +295,7 @@
      `(corfu-border
        ((t (:foreground ,flexoki-faint-bg))))
      `(corfu-current
-       ((t (:foreground ,flexoki-yellow :background ,flexoki-highlight))))
+       ((t (:foreground ,flexoki-yellow :background ,flexoki-lowlight))))
      `(corfu-default
        ((t (:inherit default :background ,flexoki-faint-bg))))
      `(corfu-deprecated
@@ -372,7 +372,7 @@
      `(magit-header-line-log-select
        ((t (:foreground ,flexoki-fg :background ,flexoki-highlight))))
      `(magit-section-heading
-       ((t (:foreground ,flexoki-meek :height 1.4))))
+       ((t (:foreground ,flexoki-meek))))
      `(magit-dimmed
        ((t (:foreground ,flexoki-meek))))
      `(magit-blame-dimmed
@@ -380,29 +380,29 @@
 
 ;;;;;; Rainbow delimiters
      `(rainbow-delimiters-depth-1-face
-       ((t (:foreground ,flexoki-green))))
+       ((t (:foreground ,flexoki-blue))))
      `(rainbow-delimiters-depth-2-face
        ((t (:foreground ,flexoki-purple))))
      `(rainbow-delimiters-depth-3-face
        ((t (:foreground ,flexoki-orange))))
      `(rainbow-delimiters-depth-4-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-yellow))))
      `(rainbow-delimiters-depth-5-face
-       ((t (:foreground ,flexoki-green))))
+       ((t (:foreground ,flexoki-blue))))
      `(rainbow-delimiters-depth-6-face
        ((t (:foreground ,flexoki-purple))))
      `(rainbow-delimiters-depth-7-face
        ((t (:foreground ,flexoki-orange))))
      `(rainbow-delimiters-depth-8-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-yellow))))
      `(rainbow-delimiters-depth-9-face
-       ((t (:foreground ,flexoki-green))))
+       ((t (:foreground ,flexoki-blue))))
      `(rainbow-delimiters-depth-10-face
        ((t (:foreground ,flexoki-purple))))
      `(rainbow-delimiters-depth-11-face
        ((t (:foreground ,flexoki-orange))))
      `(rainbow-delimiters-depth-12-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-yellow))))
      `(rainbow-delimiters-unmatched-face
        ((t (:background ,flexoki-bg :foreground ,flexoki-red :weight bold))))
 
