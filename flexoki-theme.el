@@ -124,11 +124,11 @@
 	(if (eq variant 'light) "#a02f6f" "#ce5d97"))
        ;; foreground variants
        (flexoki-lowlight
-	(if (eq variant 'light) flexoki-colour-800 flexoki-colour-200))
+	(if (eq variant 'light) flexoki-colour-200 flexoki-colour-800))
        (flexoki-highlight
-	(if (eq variant 'light) flexoki-colour-700 flexoki-colour-300))
+	(if (eq variant 'light) flexoki-colour-300 flexoki-colour-700))
        (flexoki-ultralight
-	(if (eq variant 'light) flexoki-colour-600 flexoki-colour-500))
+	(if (eq variant 'light) flexoki-colour-500 flexoki-colour-600))
        (flexoki-meek
 	(if (eq variant 'light) flexoki-colour-500 flexoki-colour-600)))
 
@@ -173,7 +173,7 @@
 	  :box t))))
      `(link
        ((t
-	 (:background ,flexoki-lowlight
+	 (:background ,flexoki-bg
 	  :foreground ,flexoki-blue
 	  :weight semi-bold
 	  :underline t))))
@@ -407,15 +407,28 @@
        ((t (:background ,flexoki-bg :foreground ,flexoki-red :weight bold))))
 
 ;;;;;; Outline
-     `(outline-minor-0      ((t (:background ,lambda-lowlight :height 1.1))))
-     `(outline-1            ((t (:inherit 'default :height 1.5 :foreground ,lambda-blue))))
-     `(outline-2            ((t (:inherit 'default :height 1.3 :foreground ,lambda-purple))))
-     `(outline-3            ((t (:inherit 'default :height 1.1 :foreground ,lambda-orange))))
-     `(outline-4            ((t (:inherit 'default :foreground ,lambda-magenta))))
-     `(outline-5            ((t (:inherit 'default :foreground ,lambda-green))))
-     `(outline-6            ((t (:inherit outline-1 :height 1))))
-     `(outline-7            ((t (:inherit outline-2 :height 1))))
-     `(outline-8            ((t (:inherit outline-3 :height 1))))
+     `(outline-minor-0
+       ((t (:background ,flexoki-lowlight :height 1.1))))
+     `(outline-1
+       ((t (:inherit 'default :foreground ,flexoki-blue :weight semi-bold))))
+     `(outline-2
+       ((t (:inherit 'default :foreground ,flexoki-purple :weight semi-bold))))
+     `(outline-3
+       ((t (:inherit 'default :foreground ,flexoki-orange :weight semi-bold))))
+     `(outline-4
+       ((t (:inherit 'default :foreground ,flexoki-magenta :weight semi-bold))))
+     `(outline-5
+       ((t (:inherit 'default :foreground ,flexoki-cyan :weight semi-bold))))
+     `(outline-6
+       ((t (:inherit outline-1))))
+     `(outline-7
+       ((t (:inherit outline-2))))
+     `(outline-8
+       ((t (:inherit outline-3))))
+
+;;;;;; Org-mode
+     `(org-todo
+       ((t (:inherit 'default :foreground ,flexoki-red :weight bold))))
 
 ;;;;;; Eshell
      `(eshell-prompt
