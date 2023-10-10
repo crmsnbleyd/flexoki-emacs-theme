@@ -241,6 +241,39 @@
        ((,class (:background ,flexoki-faint-bg))))
      `(transient-posframe
        ((,class (:foreground ,flexoki-highlight :background ,flexoki-faint-bg))))
+
+;;;;; Completion/Narrowing
+;;;;;; General Completion
+     `(completions-annotations
+       ((,class (:foreground ,flexoki-lowlight))))
+
+;;;;;; Company-mode
+     `(company-scrollbar-bg
+       ((,class (:background ,flexoki-faint-bg))))
+     `(company-scrollbar-fg
+       ((,class (:background ,flexoki-mild))))
+     `(company-tooltip
+       ((,class (:background ,flexoki-mild))))
+     `(company-tooltip-annotation
+       ((,class (:foreground ,flexoki-green))))
+     `(company-tooltip-annotation-selection
+       ((,class (:inherit    company-tooltip-annotation))))
+     `(company-tooltip-selection
+       ((,class (:foreground ,flexoki-purple :background ,flexoki-faint-bg))))
+     `(company-tooltip-common
+       ((,class (:foreground ,flexoki-blue :underline t))))
+     `(company-tooltip-common-selection
+       ((,class (:foreground ,flexoki-blue :underline t))))
+     `(company-preview-common
+       ((,class (:foreground ,flexoki-highlight))))
+     `(company-preview
+       ((,class (:background ,flexoki-blue))))
+     `(company-preview-search
+       ((,class (:background ,flexoki-cyan))))
+     `(company-template-field
+       ((,class (:foreground ,flexoki-black :background ,flexoki-yellow))))
+     `(company-echo-common
+       ((,class (:foreground ,flexoki-red))))
      )))
 
 (provide 'flexoki-theme)
