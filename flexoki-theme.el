@@ -157,12 +157,12 @@
      `(minibuffer-prompt
        ((t (:background ,flexoki-yellow))))
      `(vertical-border
-       ((t (:foreground ,flexoki-bg))))
+       ((t (:foreground ,flexoki-fg))))
      `(internal-border
        ((t (:background ,flexoki-bg :foreground ,flexoki-bg))))
      `(show-paren-match
        ((t
-	 (:background ,flexoki-ultralight
+	 (:background ,flexoki-lowlight
 	  :foreground ,flexoki-yellow
 	  :weight bold))))
      `(show-paren-mismatch
@@ -210,16 +210,18 @@
      
 ;;;;; built-in syntax (font-lock)
 
+     `(font-lock-keyword-face
+       ((t (:foreground ,flexoki-purple))))
      `(font-lock-builtin-face
-       ((t (:foreground ,flexoki-fg :weight light))))
+       ((t (:foreground ,flexoki-fg :weight bold))))
      `(font-lock-constant-face
-       ((t (:foreground ,flexoki-fg :weight light))))
+       ((t (:foreground ,flexoki-orange :weight light))))
      `(font-lock-comment-face
        ((t (:foreground ,flexoki-meek
 		 :slant ,(if flexoki-theme-set-italic-comments 'italic 'normal)
 		 :weight normal))))
      `(font-lock-function-name-face
-       ((t (:foreground ,flexoki-highlight :weight bold))))
+       ((t (:foreground ,flexoki-cyan :weight bold))))
      `(font-lock-keyword-face
        ((t (:foreground ,flexoki-fg
 		 :weight light
@@ -227,9 +229,9 @@
      `(font-lock-string-face
        ((t (:foreground ,flexoki-fg :background ,flexoki-faint-bg))))
      `(font-lock-variable-name-face
-       ((t (:foreground ,flexoki-highlight :weight light))))
+       ((t (:foreground ,flexoki-orange :weight light))))
      `(font-lock-type-face
-       ((t (:foreground ,flexoki-fg :weight light))))
+       ((t (:foreground ,flexoki-green :weight bold))))
      `(font-lock-warning-face
        ((t (:foreground ,flexoki-yellow :weight bold))))
      `(font-lock-preprocessor-face
