@@ -178,14 +178,14 @@
      `(flexoki-yellow      ((,class (:foreground ,flexoki-yellow))))
 
 ;;;;; Basic faces
-     `(error                ((,class (:foreground ,flexoki-red :bold t))))
-     `(success              ((,class (:foreground ,flexoki-green :bold t))))
-     `(warning              ((,class (:foreground ,flexoki-yellow :bold t))))
-     `(alert-low-face       ((,class (:foreground ,flexoki-orange))))
-     `(escape-glyph         ((,class (:foreground ,flexoki-cyan))))
-     `(highlight            ((,class (:background ,flexoki-highlight))))
-     `(homoglyph            ((,class (:foreground ,flexoki-blue))))
-     `(match                ((,class (:foreground ,flexoki-lowlight :background ,flexoki-blue))))
+     `(error               ((,class (:foreground ,flexoki-red :bold t))))
+     `(success             ((,class (:foreground ,flexoki-green :bold t))))
+     `(warning             ((,class (:foreground ,flexoki-yellow :bold t))))
+     `(alert-low-face      ((,class (:foreground ,flexoki-orange))))
+     `(escape-glyph        ((,class (:foreground ,flexoki-cyan))))
+     `(highlight           ((,class (:background ,flexoki-highlight))))
+     `(homoglyph           ((,class (:foreground ,flexoki-blue))))
+     `(match               ((,class (:foreground ,flexoki-lowlight :background ,flexoki-blue))))
      
      )))
 
