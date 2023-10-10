@@ -31,6 +31,11 @@
   '(dark light)
   "Symbols of the flexoki themes")
 
+(defcustom flexoki-theme-custom-colours nil
+  "Specify a list of custom colours."
+  :type 'alist
+  :group 'flexoki-theme)
+
 (defcustom flexoki-themes-set-theme 'light
   "Choose which theme variant, light or dark, to use."
   :group 'flexoki-theme
@@ -62,50 +67,126 @@
 (defface flexoki-magenta    nil
   "Magenta accent colour for flexoki-theme." :group 'faces)
 (defface flexoki-lowlight   nil
-  "Grey colour for flexoki-theme."           :group 'faces)
+  "A grey for flexoki-theme."                :group 'faces)
 (defface flexoki-highlight  nil
-  "Grey colour for flexoki-theme."           :group 'faces)
+  "Slightly lighter grey for flexoki-theme." :group 'faces)
 (defface flexoki-ultralight nil
-  "Grey colour for flexoki-theme."           :group 'faces)
+  "Very light grey for flexoki-theme."       :group 'faces)
+
+;; Greys from the Flexoki definition
+(defconst flexoki-colour-900 "#232726")
+(defconst flexoki-colour-800 "#403e3c")
+(defconst flexoki-colour-700 "#575653")
+(defconst flexoki-colour-600 "#6f6e69")
+(defconst flexoki-colour-500 "#878580")
+(defconst flexoki-colour-300 "#b7b5ac")
+(defconst flexoki-colour-200 "#cecdc3")
 
 (defun flexoki-theme-create (variant theme-name)
   "Define theme with THEME-NAME using VARIANT settings"
   (let ((flexoki-bg
-	 (if (eq variant 'dark) "#fffcf0" "#100f0f"))
+	 (if (eq variant 'light) "#fffcf0" "#100f0f"))
 	(flexoki-fg
-	 (if (eq variant 'dark) "#100f0f" "#fffcf0"))
+	 (if (eq variant 'light) "#100f0f" "#fffcf0"))
 	;; accents
 	(flexoki-red
-	 (if (eq variant 'dark) "#af3029" "#d14d41"))
+	 (if (eq variant 'light) "#af3029" "#d14d41"))
 	(flexoki-orange
-	 (if (eq variant 'dark) "#bc5215" "#da702c"))
+	 (if (eq variant 'light) "#bc5215" "#da702c"))
 	(flexoki-yellow
-	 (if (eq variant 'dark) "#ad8301" "#d0a215"))
+	 (if (eq variant 'light) "#ad8301" "#d0a215"))
 	(flexoki-green
-	 (if (eq variant 'dark) "#66800b" "#879a39"))
+	 (if (eq variant 'light) "#66800b" "#879a39"))
 	(flexoki-cyan
-	 (if (eq variant 'dark) "#24837b" "#3aa99f"))
+	 (if (eq variant 'light) "#24837b" "#3aa99f"))
 	(flexoki-blue
-	 (if (eq variant 'dark) "#205EA6" "#4385be"))
+	 (if (eq variant 'light) "#205EA6" "#4385be"))
 	(flexoki-purple
-	 (if (eq variant 'dark) "#5E409D" "#8b7ec8"))
+	 (if (eq variant 'light) "#5E409D" "#8b7ec8"))
 	(flexoki-magenta
-	 (if (eq variant 'dark) "#a02f6f" "#ce5d97"))
+	 (if (eq variant 'light) "#a02f6f" "#ce5d97"))
 	;; background variants
-	(flexoki-blue
-	 (if (eq variant 'dark) "#205EA6" "#4385be"))
-	(flexoki-purple
-	 (if (eq variant 'dark) "#5E409D" "#8b7ec8"))
-	(flexoki-magenta
-	 (if (eq variant 'dark) "#a02f6f" "#ce5d97")))
+	(flexoki-lowlight
+	 (if (eq variant 'light) flexoki-800 flexoki-200))
+	(flexoki-highlight
+	 (if (eq variant 'light) flexoki-700 flexoki-300))
+	(flexoki-ultralight
+	 (if (eq variant 'light) flexoki-600 flexoki-500)))
 
+    ;; set any extra colours
+    (dolist (item flexoki-theme-custom-colours)
+      (pcase item
+	(`(,cvar . ,val) (set cvar val))))
+    
     (custom-theme-set-faces
      theme-name
 
-     `(default  ((,class (:background ,flexoki-bg :foreground ,flexoki-fg))))
-     `(cursor   ((,class (:background ,flexoki-fg))))
-     `(fringe   ((,class (:background ,flexoki-bg :weight light))))
-     `(hl-line  ((,class (:background ,flexoki-highlight))))
+     `(default
+       ((,class (:background ,flexoki-bg :foreground ,flexoki-fg))))
+     `(cursor
+       ((,class (:background ,flexoki-fg))))
+     `(fringe
+       ((,class (:background ,flexoki-bg :weight light))))
+     `(hl-line
+       ((,class (:background ,flexoki-highlight))))
+     `(region
+       ((,class (:background ,flexoki-lowlight))))
+     `(secondary-selection
+       ((,class (:background ,flexoki-highlight))))
+     `(buffer-menu-buffer
+       ((,class (:background ,flexoki-fg))))
+     `(minibuffer-prompt
+       ((,class (:background ,flexoki-yellow))))
+     `(vertical-border
+       ((,class (:foreground ,flexoki-bg))))
+     `(internal-border
+       ((,class (:background ,flexoki-bg :foreground ,flexoki-bg))))
+     `(show-paren-match
+       ((,class
+	 (:background ,flexoki-ultralight
+	  :foreground ,flexoki-yellow
+	  :weight bold))))
+     `(show-paren-mismatch
+       ((,class
+	 (:background ,flexoki-ultralight
+	  :foreground ,flexoki-red
+	  :weight bold
+	  :box t))))
+     `(link
+       ((,class
+	 (:background ,flexoki-lowlight
+	  :foreground ,flexoki-fg
+	  :weight semi-bold
+	  :underline t))))
+     `(shadow
+       ((,class (:foreground ,flexoki-ultralight))))
+
+     ;; NOTE: We want the flexoki-theme- colors to be available as faces. It seems like there
+     ;; should be a better way to do this but...
+     `(flexoki-fg          ((,class (:foreground ,flexoki-fg))))
+     `(flexoki-bg          ((,class (:background ,flexoki-bg))))
+     `(flexoki-ultralight  ((,class (:background ,flexoki-ultralight))))
+     `(flexoki-highlight   ((,class (:foreground ,flexoki-highlight))))
+     `(flexoki-lowlight    ((,class (:foreground ,flexoki-lowlight))))
+     `(flexoki-blue        ((,class (:foreground ,flexoki-blue))))
+     `(flexoki-cyan        ((,class (:foreground ,flexoki-cyan))))
+     `(flexoki-green       ((,class (:foreground ,flexoki-green))))
+     `(flexoki-magenta     ((,class (:foreground ,flexoki-magenta))))
+     `(flexoki-orange      ((,class (:foreground ,flexoki-orange))))
+     `(flexoki-purple      ((,class (:foreground ,flexoki-purple))))
+     `(flexoki-red         ((,class (:foreground ,flexoki-red))))
+     `(flexoki-yellow      ((,class (:foreground ,flexoki-yellow))))
+
+;;;;; Basic faces
+     `(error                ((,class (:foreground ,flexoki-red :bold t))))
+     `(success              ((,class (:foreground ,flexoki-green :bold t))))
+     `(warning              ((,class (:foreground ,flexoki-yellow :bold t))))
+     `(alert-low-face       ((,class (:foreground ,flexoki-orange))))
+     `(escape-glyph         ((,class (:foreground ,flexoki-cyan))))
+     `(highlight            ((,class (:background ,flexoki-highlight))))
+     `(homoglyph            ((,class (:foreground ,flexoki-blue))))
+     `(match                ((,class (:foreground ,flexoki-lowlight :background ,flexoki-blue))))
+     
      )))
 
 (provide 'flexoki-theme)

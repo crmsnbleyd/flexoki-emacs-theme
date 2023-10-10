@@ -1,6 +1,10 @@
 ;;; Copyright © 2023 Andrew Jose <arnav.jose@gmail.com>
 ;;;
-;;; This file is NOT part of GNU Guix.
+;; SPDX-License-Identifier: GPL-3.0-or-later
+;; Author: Andrew Jose <arnav.jose@gmail.com>
+;; Maintainer: Andrew Jose <arnav.jose@gmail.com>
+;; URL: https://github.com/crmsnbleyd/flexoki-emacs-theme
+;; This file is NOT part of GNU Guix.
 ;;;
 ;;; GNU Guix is free software; you can redistribute it and/or modify it
 ;;; under the terms of the GNU General Public License as published by
@@ -48,5 +52,5 @@
       (home-page "https://github.com/crmsnbleyd/flexoki-emacs-theme")
       (synopsis "Emacs theme based on Flexoki")
       (description
-       "This package contains dark and light versions of the Flexoki theme by Steph Ango")
+       "This package contains dark and light versions of the Flexoki colour scheme by Steph Ango")
       (license license:gpl3+))))
