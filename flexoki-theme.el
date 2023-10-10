@@ -88,6 +88,10 @@
 (defconst flexoki-colour-200 "#cecdc3")
 (defconst flexoki-colour-100 "#e6e4d9")
 
+;;;; After Load Theme Hook
+(defvar flexoki-theme-after-load-theme-hook nil
+  "Hook run after flexoki-theme is loaded using `load-theme'.")
+
 (defun flexoki-theme-create (variant theme-name)
   "Define theme with THEME-NAME using VARIANT settings"
   (let ((flexoki-bg
@@ -431,4 +435,5 @@
      )))
 
 (provide 'flexoki-theme)
+
 ;;; flexoki-theme.el ends here
