@@ -119,7 +119,9 @@
 	(flexoki-highlight
 	 (if (eq variant 'light) flexoki-700 flexoki-300))
 	(flexoki-ultralight
-	 (if (eq variant 'light) flexoki-600 flexoki-500)))
+	 (if (eq variant 'light) flexoki-600 flexoki-500))
+	(flexoki-meek
+	 (if (eq variant 'light) flexoki-500 flexoki-600)))
 
     ;; set any extra colours
     (dolist (item flexoki-theme-custom-colours)
@@ -177,6 +179,7 @@
      `(flexoki-ultralight  ((,class (:background ,flexoki-ultralight))))
      `(flexoki-highlight   ((,class (:foreground ,flexoki-highlight))))
      `(flexoki-lowlight    ((,class (:foreground ,flexoki-lowlight))))
+     `(flexoki-meek        ((,class (:background ,flexoki-meek))))
      `(flexoki-blue        ((,class (:foreground ,flexoki-blue))))
      `(flexoki-cyan        ((,class (:foreground ,flexoki-cyan))))
      `(flexoki-green       ((,class (:foreground ,flexoki-green))))
@@ -203,7 +206,7 @@
      `(font-lock-constant-face
        ((,class (:foreground ,flexoki-fg :weight light))))
      `(font-lock-comment-face
-       ((,class (:foreground ,flexoki-lowlight
+       ((,class (:foreground ,flexoki-meek
 		 :slant ,(if flexoki-theme-set-italic-comments 'italic 'normal)
 		 :weight normal))))
      `(font-lock-function-name-face
@@ -245,7 +248,7 @@
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
      `(completions-annotations
-       ((,class (:foreground ,flexoki-lowlight))))
+       ((,class (:foreground ,flexoki-meek))))
 
 ;;;;;; Company-mode
      `(company-scrollbar-bg
@@ -277,7 +280,7 @@
 
 ;;;;;; Corfu
      `(corfu-annotations
-       ((,class (:foreground ,flexoki-faint-bg))))
+       ((,class (:foreground ,flexoki-meek))))
      `(corfu-bar
        ((,class (:foreground ,flexoki-ultralight))))
      `(corfu-border
@@ -285,11 +288,146 @@
      `(corfu-current
        ((,class (:foreground ,flexoki-yellow :background ,flexoki-highlight))))
      `(corfu-default
-       ((,class (:inherit default :background ,flexoki-faint))))
+       ((,class (:inherit default :background ,flexoki-faint-bg))))
      `(corfu-deprecated
        ((,class (:foreground ,flexoki-highlight))))
      `(corfu-echo
        ((,class (:inherit default))))
+
+;;;;;; Vertico
+     `(vertico-current
+       ((,class (:weight bold :background ,flexoki-highlight))))
+     `(vertico-group-separator
+       ((,class (:foreground ,flexoki-ultralight :strike-through t))))
+     `(vertico-multiline
+       ((,class (:foreground ,flexoki-meek))))
+     `(vertico-group-title
+       ((,class (:foreground ,flexoki-meek))))
+
+;;;;; Diffs & VC
+
+;;;;;; Diff
+     `(diff-header
+       ((,class (:foreground ,flexoki-fg))))
+     `(diff-file-header
+       ((,class (:foreground ,flexoki-fg))))
+     `(diff-hunk-header
+       ((,class (:foreground ,flexoki-fg))))
+     `(diff-context
+       ((,class (:background ,flexoki-lowlight))))
+     `(diff-changed
+       ((,class (:background unspecified :foreground ,flexoki-blue))))
+     `(diff-refine-changed
+       ((,class (:foreground ,flexoki-blue))))
+     `(diff-added
+       ((,class (:background unspecified :foreground ,flexoki-green))))
+     `(diff-refine-added
+       ((,class (:background unspecified :foreground ,flexoki-green))))
+     `(diff-removed
+       ((,class (:background unspecified :foreground ,flexoki-red))))
+     `(diff-refine-removed
+       ((,class (:background unspecified :foreground ,flexoki-meek :strike-through t))))
+     `(diff-indicator-changed
+       ((,class (:inherit diff-changed))))
+     `(diff-indicator-added
+       ((,class (:inherit diff-added))))
+     `(diff-indicator-removed
+       ((,class (:inherit diff-removed))))
+
+;;;;;; Diff-hl
+     `(diff-hl-change ((,class (:inherit default :foreground ,flexoki-blue ))))
+     `(diff-hl-delete ((,class (:inherit default :foreground ,flexoki-red  ))))
+     `(diff-hl-insert ((,class (:inherit default :foreground ,flexoki-green))))
+
+;;;;;; Ediff
+     `(ediff-even-diff-A
+       ((,class (:background ,flexoki-lowlight))))
+     `(ediff-even-diff-B
+       ((,class (:background ,flexoki-lowlight))))
+     `(ediff-even-diff-C
+       ((,class (:background ,flexoki-lowlight))))
+     `(ediff-even-diff-Ancestor
+       ((,class (:background ,flexoki-lowlight))))
+     `(ediff-odd-diff-A
+       ((,class (:background ,flexoki-faint-bg))))
+     `(ediff-odd-diff-B
+       ((,class (:background ,flexoki-faint-bg))))
+     `(ediff-odd-diff-C
+       ((,class (:background ,flexoki-faint-bg))))
+     `(ediff-odd-diff-Ancestor
+       ((,class (:background ,flexoki-faint-bg))))
+
+;;;;;; Magit
+     `(magit-header-line
+       ((,class (:foreground ,flexoki-fg :background ,flexoki-highlight))))
+     `(magit-header-line-log-select
+       ((,class (:foreground ,flexoki-fg :background ,flexoki-highlight))))
+     `(magit-section-heading
+       ((,class (:foreground ,flexoki-meek :height 1.4))))
+     `(magit-dimmed
+       ((,class (:foreground ,flexoki-meek))))
+     `(magit-blame-dimmed
+       ((,class (:foreground ,flexoki-meek))))
+
+;;;;;; Rainbow delimiters
+     `(rainbow-delimiters-depth-1-face
+       ((,class (:foreground ,flexoki-green))))
+     `(rainbow-delimiters-depth-2-face
+       ((,class (:foreground ,flexoki-purple))))
+     `(rainbow-delimiters-depth-3-face
+       ((,class (:foreground ,flexoki-orange))))
+     `(rainbow-delimiters-depth-4-face
+       ((,class (:foreground ,flexoki-blue))))
+     `(rainbow-delimiters-depth-5-face
+       ((,class (:foreground ,flexoki-green))))
+     `(rainbow-delimiters-depth-6-face
+       ((,class (:foreground ,flexoki-purple))))
+     `(rainbow-delimiters-depth-7-face
+       ((,class (:foreground ,flexoki-orange))))
+     `(rainbow-delimiters-depth-8-face
+       ((,class (:foreground ,flexoki-blue))))
+     `(rainbow-delimiters-depth-9-face
+       ((,class (:foreground ,flexoki-green))))
+     `(rainbow-delimiters-depth-10-face
+       ((,class (:foreground ,flexoki-purple))))
+     `(rainbow-delimiters-depth-11-face
+       ((,class (:foreground ,flexoki-orange))))
+     `(rainbow-delimiters-depth-12-face
+       ((,class (:foreground ,flexoki-blue))))
+     `(rainbow-delimiters-unmatched-face
+       ((,class (:background ,flexoki-bg :foreground ,flexoki-red :weight bold))))
+
+;;;;;; Eshell
+     `(eshell-prompt
+       ((,class (:foreground ,flexoki-yellow))))
+     `(eshell-ls-archive
+       ((,class (:foreground ,flexoki-meek))))
+     `(eshell-ls-backup
+       ((,class (:foreground ,flexoki-meek))))
+     `(eshell-ls-clutter
+       ((,class (:foreground ,flexoki-orange :weight bold))))
+     `(eshell-ls-directory
+       ((,class (:foreground ,flexoki-blue :weight bold))))
+     `(eshell-ls-executable
+       ((,class (:weight bold))))
+     `(eshell-ls-missing
+       ((,class (:foreground ,flexoki-red :bold t))))
+     `(eshell-ls-product
+       ((,class (:foreground ,flexoki-red))))
+     `(eshell-ls-readonly
+       ((,class (:backgtround ,flexoki-highlight :foreground ,flexoki-meek :weight light))))
+     `(eshell-ls-special
+       ((,class (:foreground ,flexoki-yellow :bold t))))
+     `(eshell-ls-symlink
+       ((,class (:foreground ,flexoki-red))))
+     `(eshell-ls-unreadable
+       ((,class (:foreground ,flexoki-red :bold t))))
+
+;;;;;; Shell script
+     `(sh-quoted-exec
+       ((,class (:foreground ,flexoki-purple))))
+     `(sh-heredoc
+       ((,class (:foreground ,flexoki-orange))))
      )))
 
 (provide 'flexoki-theme)

@@ -1,2 +1,11 @@
 This repository contains emacs versions of the dark and light flexoki theme by Steph Ango, available at
 [[stephango.com/flexoki]]
+
+This theme is only available on this repository for now.
+
+** Contributing
+If you wish to add support for a mode, feel free to open a pull request with the
+changes made along with a screenshot showing the mode in action.
+
+** Acknowledgements
+Special thanks to [[https://github.com/Lambda-Emacs/lambda-themes][Lambda-themes]] by Lambda-Emacs whose approach I more or less poached.
