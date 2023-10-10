@@ -46,6 +46,11 @@
   :group 'flexoki-theme
   :type 'boolean)
 
+(defcustom flexoki-theme-set-italic-keywords t
+  "If t then use italics for keywords."
+  :group 'flexoki-theme
+  :type 'boolean)
+
 (defface flexoki-bg         nil
   "Background face for flexoki-theme."       :group 'faces)
 (defface flexoki-fg         nil
@@ -81,11 +86,14 @@
 (defconst flexoki-colour-500 "#878580")
 (defconst flexoki-colour-300 "#b7b5ac")
 (defconst flexoki-colour-200 "#cecdc3")
+(defconst flexoki-colour-100 "#e6e4d9")
 
 (defun flexoki-theme-create (variant theme-name)
   "Define theme with THEME-NAME using VARIANT settings"
   (let ((flexoki-bg
 	 (if (eq variant 'light) "#fffcf0" "#100f0f"))
+	(flexoki-faint-bg
+	 (if (eq variant 'light) flexoki-colour-100 flexoki-colour-900))
 	(flexoki-fg
 	 (if (eq variant 'light) "#100f0f" "#fffcf0"))
 	;; accents
@@ -105,7 +113,7 @@
 	 (if (eq variant 'light) "#5E409D" "#8b7ec8"))
 	(flexoki-magenta
 	 (if (eq variant 'light) "#a02f6f" "#ce5d97"))
-	;; background variants
+	;; foreground variants
 	(flexoki-lowlight
 	 (if (eq variant 'light) flexoki-800 flexoki-200))
 	(flexoki-highlight
@@ -165,6 +173,7 @@
      ;; should be a better way to do this but...
      `(flexoki-fg          ((,class (:foreground ,flexoki-fg))))
      `(flexoki-bg          ((,class (:background ,flexoki-bg))))
+     `(flexoki-faint-bg    ((,class (:background ,flexoki-faint-bg))))
      `(flexoki-ultralight  ((,class (:background ,flexoki-ultralight))))
      `(flexoki-highlight   ((,class (:foreground ,flexoki-highlight))))
      `(flexoki-lowlight    ((,class (:foreground ,flexoki-lowlight))))
@@ -187,6 +196,51 @@
      `(homoglyph           ((,class (:foreground ,flexoki-blue))))
      `(match               ((,class (:foreground ,flexoki-lowlight :background ,flexoki-blue))))
      
+;;;;; built-in syntax (font-lock)
+
+     `(font-lock-builtin-face
+       ((,class (:foreground ,flexoki-fg :weight light))))
+     `(font-lock-constant-face
+       ((,class (:foreground ,flexoki-fg :weight light))))
+     `(font-lock-comment-face
+       ((,class (:foreground ,flexoki-lowlight
+		 :slant ,(if flexoki-theme-set-italic-comments 'italic 'normal)
+		 :weight normal))))
+     `(font-lock-function-name-face
+       ((,class (:foreground ,flexoki-highlight :weight bold))))
+     `(font-lock-keyword-face
+       ((,class (:foreground ,flexoki-fg
+		 :weight light
+		 :slant ,(if flexoki-theme-set-italic-keywords 'italic 'normal)))))
+     `(font-lock-string-face
+       ((,class (:foreground ,flexoki-fg :background ,flexoki-faint-bg))))
+     `(font-lock-variable-name-face
+       ((,class (:foreground ,flexoki-highlight :weight light))))
+     `(font-lock-type-face
+       ((,class (:foreground ,flexoki-fg :weight light))))
+     `(font-lock-warning-face
+       ((,class (:foreground ,flexoki-yellow :weight bold))))
+     `(font-lock-preprocessor-face
+       ((,class (:foreground ,flexoki-fg :weight medium))))
+
+;;;;; Childframes
+;;;;;; Mini-Frame
+     `(mini-popup-background ((,class (:background ,flexoki-faint-bg))))
+     `(mini-popup-border     ((,class (:background ,flexoki-faint-bg))))
+
+     `;;;;;; Mini-Popup (Childframe)
+     `(mini-popup-background ((,class (:background ,flexoki-faint-bg))))
+     `(mini-popup-border     ((,class (:background ,flexoki-faint-bg))))
+
+;;;;;; Posframe
+     `(which-key-posframe
+       ((,class (:background ,flexoki-faint-bg))))
+     `(which-key-posframe-border
+       ((,class (:background ,flexoki-faint-bg))))
+     `(transient-posframe-border
+       ((,class (:background ,flexoki-faint-bg))))
+     `(transient-posframe
+       ((,class (:foreground ,flexoki-highlight :background ,flexoki-faint-bg))))
      )))
 
 (provide 'flexoki-theme)
