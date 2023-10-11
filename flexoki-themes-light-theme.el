@@ -1,4 +1,4 @@
-;;; flexoki-light-theme.el --- Light variant of flexoki-theme -*- lexical-binding:t -*-
+;;; flexoki-themes-light-theme.el --- Light variant of flexoki-theme -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 

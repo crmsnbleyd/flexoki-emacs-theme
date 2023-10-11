@@ -1,4 +1,4 @@
-;;; flexoki-dark-theme.el --- Dark variant of flexoki-theme -*- lexical-binding:t -*-
+;;; flexoki-themes-dark-theme.el --- Dark variant of flexoki-theme -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
