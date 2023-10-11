@@ -27,4 +27,4 @@
 
 (provide 'flexoki-themes-light-theme)
 
-;;; flexoki-light-theme.el ends here
+;;; flexoki-themes-light-theme.el ends here
