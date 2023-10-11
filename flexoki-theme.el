@@ -1,4 +1,5 @@
-;;; flexoki-theme.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
+;;; flexoki-themes.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
+;;; Version: 0.11
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
@@ -13,78 +14,78 @@
 
 ;;; Commentary:
 ;;
-;; The `flexoki-theme' is a pair of light and dark themes for GNU
+;; The `flexoki-themess' is a pair of light and dark themes for GNU
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
-(defgroup flexoki-theme ()
+(defgroup flexoki-themes ()
   "Inky themes for prose and code."
   :group 'faces
-  :link '(info-link "(flexoki-theme) Top")
+  :link '(info-link "(flexoki-themes) Top")
   :link '(url-link
 	  :tag "Homepage"
 	  "https://github.com/crmsnbleyd/flexoki-emacs-theme")
-  :prefix "flexoki-theme-"
+  :prefix "flexoki-themes-"
   :tag "Flexoki Theme")
 
-(defconst flexoki-theme-variants
+(defconst flexoki-themes-variants
   '(dark light)
   "Symbols of the flexoki themes")
 
-(defcustom flexoki-theme-custom-colours nil
+(defcustom flexoki-themes-custom-colours nil
   "Specify a list of custom colours."
   :type 'alist
-  :group 'flexoki-theme)
+  :group 'flexoki-themes)
 
 (defcustom flexoki-themes-set-theme 'light
   "Choose which theme variant, light or dark, to use."
-  :group 'flexoki-theme
+  :group 'flexoki-themes
   :type 'symbol)
 
-(defcustom flexoki-theme-set-italic-comments t
+(defcustom flexoki-themes-set-italic-comments t
   "If t then use italics for comments."
   :group 'flexoki-theme
   :type 'boolean)
 
-(defcustom flexoki-theme-set-italic-keywords t
+(defcustom flexoki-themes-set-italic-keywords t
   "If t then use italics for keywords."
-  :group 'flexoki-theme
+  :group 'flexoki-themes
   :type 'boolean)
 
-(defface flexoki-bg         nil
-  "Background face for flexoki-theme."       :group 'faces)
-(defface flexoki-fg         nil
-  "Foreground face for flexoki-theme."       :group 'faces)
-(defface flexoki-red        nil
-  "Red accent colour for flexoki-theme."     :group 'faces)
-(defface flexoki-orange     nil
-  "Orange accent colour for flexoki-theme."  :group 'faces)
-(defface flexoki-yellow     nil
-  "Yellow accent colour for flexoki-theme."  :group 'faces)
-(defface flexoki-green      nil
-  "Green accent colour for flexoki-theme."   :group 'faces)
-(defface flexoki-cyan       nil
-  "Cyan accent colour for flexoki-theme."    :group 'faces)
-(defface flexoki-blue       nil
-  "Blue accent colour for flexoki-theme."    :group 'faces)
-(defface flexoki-purple     nil
-  "Purple accent colour for flexoki-theme."  :group 'faces)
-(defface flexoki-magenta    nil
-  "Magenta accent colour for flexoki-theme." :group 'faces)
-(defface flexoki-lowlight   nil
-  "A grey for flexoki-theme."                :group 'faces)
-(defface flexoki-highlight  nil
-  "Slightly lighter grey for flexoki-theme." :group 'faces)
-(defface flexoki-ultralight nil
-  "Very light grey for flexoki-theme."       :group 'faces)
+(defface flexoki-themes-bg         nil
+  "Background face for flexoki-themes."       :group 'faces)
+(defface flexoki-themes-fg         nil
+  "Foreground face for flexoki-themes."       :group 'faces)
+(defface flexoki-themes-red        nil
+  "Red accent colour for flexoki-themes."     :group 'faces)
+(defface flexoki-themes-orange     nil
+  "Orange accent colour for flexoki-themes."  :group 'faces)
+(defface flexoki-themes-yellow     nil
+  "Yellow accent colour for flexoki-themes."  :group 'faces)
+(defface flexoki-themes-green      nil
+  "Green accent colour for flexoki-themes."   :group 'faces)
+(defface flexoki-themes-cyan       nil
+  "Cyan accent colour for flexoki-themes."    :group 'faces)
+(defface flexoki-themes-blue       nil
+  "Blue accent colour for flexoki-themes."    :group 'faces)
+(defface flexoki-themes-purple     nil
+  "Purple accent colour for flexoki-themes."  :group 'faces)
+(defface flexoki-themes-magenta    nil
+  "Magenta accent colour for flexoki-themes." :group 'faces)
+(defface flexoki-themes-lowlight   nil
+  "A grey for flexoki-themes."                :group 'faces)
+(defface flexoki-themes-highlight  nil
+  "Slightly lighter grey for flexoki-themes." :group 'faces)
+(defface flexoki-themes-ultralight nil
+  "Very light grey for flexoki-themes."       :group 'faces)
 
 ;; Greys from the Flexoki definition
 
 ;;;; After Load Theme Hook
-(defvar flexoki-theme-after-load-theme-hook nil
-  "Hook run after flexoki-theme is loaded using `load-theme'.")
+(defvar flexoki-themes-after-load-theme-hook nil
+  "Hook run after flexoki-themes is loaded using `load-theme'.")
 
-(defun flexoki-theme-create (variant theme-name)
+(defun flexoki-themes-create (variant theme-name)
   "Define theme with THEME-NAME using VARIANT settings"
   (let*
       ((flexoki-colour-black "#100f0f")
@@ -97,144 +98,144 @@
        (flexoki-colour-200   "#cecdc3")
        (flexoki-colour-100   "#e6e4d9")
        (flexoki-colour-paper "#fffcf0")
-       (flexoki-bg
+       (flexoki-themes-bg
 	(if (eq variant 'light)
 	    flexoki-colour-paper flexoki-colour-black))
        (flexoki-faint-bg
 	(if (eq variant 'light)
 	    flexoki-colour-100 flexoki-colour-900))
-       (flexoki-fg
+       (flexoki-themes-fg
 	(if (eq variant 'light) "#100f0f" "#fffcf0"))
        ;; accents
-       (flexoki-red
+       (flexoki-themes-red
 	(if (eq variant 'light) "#af3029" "#d14d41"))
-       (flexoki-orange
+       (flexoki-themes-orange
 	(if (eq variant 'light) "#bc5215" "#da702c"))
-       (flexoki-yellow
+       (flexoki-themes-yellow
 	(if (eq variant 'light) "#ad8301" "#d0a215"))
-       (flexoki-green
+       (flexoki-themes-green
 	(if (eq variant 'light) "#66800b" "#879a39"))
-       (flexoki-cyan
+       (flexoki-themes-cyan
 	(if (eq variant 'light) "#24837b" "#3aa99f"))
-       (flexoki-blue
+       (flexoki-themes-blue
 	(if (eq variant 'light) "#205EA6" "#4385be"))
-       (flexoki-purple
+       (flexoki-themes-purple
 	(if (eq variant 'light) "#5E409D" "#8b7ec8"))
-       (flexoki-magenta
+       (flexoki-themes-magenta
 	(if (eq variant 'light) "#a02f6f" "#ce5d97"))
        ;; foreground variants
-       (flexoki-lowlight
+       (flexoki-themes-lowlight
 	(if (eq variant 'light) flexoki-colour-200 flexoki-colour-800))
-       (flexoki-highlight
+       (flexoki-themes-highlight
 	(if (eq variant 'light) flexoki-colour-300 flexoki-colour-700))
-       (flexoki-ultralight
+       (flexoki-themes-ultralight
 	(if (eq variant 'light) flexoki-colour-500 flexoki-colour-600))
-       (flexoki-meek
+       (flexoki-themes-meek
 	(if (eq variant 'light) flexoki-colour-500 flexoki-colour-600)))
 
     ;; set any extra colours
-    (dolist (item flexoki-theme-custom-colours)
+    (dolist (item flexoki-themes-custom-colours)
       (pcase item
 	(`(,cvar . ,val) (set cvar val))))
     
     (custom-theme-set-faces
      theme-name
      `(default
-       ((t (:background ,flexoki-bg :foreground ,flexoki-fg))))
+       ((t (:background ,flexoki-themes-bg :foreground ,flexoki-themes-fg))))
      `(cursor
-       ((t (:background ,flexoki-fg))))
+       ((t (:background ,flexoki-themes-fg))))
      `(fringe
-       ((t (:background ,flexoki-bg :weight light))))
+       ((t (:background ,flexoki-themes-bg :weight light))))
      `(hl-line
-       ((t (:background ,flexoki-highlight))))
+       ((t (:background ,flexoki-themes-highlight))))
      `(region
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(secondary-selection
-       ((t (:background ,flexoki-highlight))))
+       ((t (:background ,flexoki-themes-highlight))))
      `(buffer-menu-buffer
-       ((t (:background ,flexoki-fg))))
+       ((t (:background ,flexoki-themes-fg))))
      `(minibuffer-prompt
-       ((t (:background ,flexoki-yellow))))
+       ((t (:background ,flexoki-themes-yellow))))
      `(vertical-border
-       ((t (:foreground ,flexoki-fg))))
+       ((t (:foreground ,flexoki-themes-fg))))
      `(internal-border
-       ((t (:background ,flexoki-bg :foreground ,flexoki-bg))))
+       ((t (:background ,flexoki-themes-bg :foreground ,flexoki-themes-bg))))
      `(show-paren-match
        ((t
-	 (:background ,flexoki-lowlight
-	  :foreground ,flexoki-yellow
+	 (:background ,flexoki-themes-lowlight
+	  :foreground ,flexoki-themes-yellow
 	  :weight bold))))
      `(show-paren-mismatch
        ((t
-	 (:background ,flexoki-ultralight
-	  :foreground ,flexoki-red
+	 (:background ,flexoki-themes-ultralight
+	  :foreground ,flexoki-themes-red
 	  :weight bold
 	  :box t))))
      `(link
        ((t
-	 (:background ,flexoki-bg
-	  :foreground ,flexoki-blue
+	 (:background ,flexoki-themes-bg
+	  :foreground ,flexoki-themes-blue
 	  :weight semi-bold
 	  :underline t))))
      `(shadow
-       ((t (:foreground ,flexoki-ultralight))))
+       ((t (:foreground ,flexoki-themes-ultralight))))
 
-     ;; NOTE: We want the flexoki-theme- colors to be available as faces. It seems like there
+     ;; NOTE: We want the flexoki-themes- colors to be available as faces. It seems like there
      ;; should be a better way to do this but...
-     `(flexoki-fg          ((t (:foreground ,flexoki-fg))))
-     `(flexoki-bg          ((t (:background ,flexoki-bg))))
+     `(flexoki-themes-fg          ((t (:foreground ,flexoki-themes-fg))))
+     `(flexoki-themes-bg          ((t (:background ,flexoki-themes-bg))))
      `(flexoki-faint-bg    ((t (:background ,flexoki-faint-bg))))
-     `(flexoki-ultralight  ((t (:background ,flexoki-ultralight))))
-     `(flexoki-highlight   ((t (:foreground ,flexoki-highlight))))
-     `(flexoki-lowlight    ((t (:foreground ,flexoki-lowlight))))
-     `(flexoki-meek        ((t (:background ,flexoki-meek))))
-     `(flexoki-blue        ((t (:foreground ,flexoki-blue))))
-     `(flexoki-cyan        ((t (:foreground ,flexoki-cyan))))
-     `(flexoki-green       ((t (:foreground ,flexoki-green))))
-     `(flexoki-magenta     ((t (:foreground ,flexoki-magenta))))
-     `(flexoki-orange      ((t (:foreground ,flexoki-orange))))
-     `(flexoki-purple      ((t (:foreground ,flexoki-purple))))
-     `(flexoki-red         ((t (:foreground ,flexoki-red))))
-     `(flexoki-yellow      ((t (:foreground ,flexoki-yellow))))
+     `(flexoki-themes-ultralight  ((t (:background ,flexoki-themes-ultralight))))
+     `(flexoki-themes-highlight   ((t (:foreground ,flexoki-themes-highlight))))
+     `(flexoki-themes-lowlight    ((t (:foreground ,flexoki-themes-lowlight))))
+     `(flexoki-themes-meek        ((t (:background ,flexoki-themes-meek))))
+     `(flexoki-themes-blue        ((t (:foreground ,flexoki-themes-blue))))
+     `(flexoki-themes-cyan        ((t (:foreground ,flexoki-themes-cyan))))
+     `(flexoki-themes-green       ((t (:foreground ,flexoki-themes-green))))
+     `(flexoki-themes-magenta     ((t (:foreground ,flexoki-themes-magenta))))
+     `(flexoki-themes-orange      ((t (:foreground ,flexoki-themes-orange))))
+     `(flexoki-themes-purple      ((t (:foreground ,flexoki-themes-purple))))
+     `(flexoki-themes-red         ((t (:foreground ,flexoki-themes-red))))
+     `(flexoki-themes-yellow      ((t (:foreground ,flexoki-themes-yellow))))
 
 ;;;;; Basic faces
-     `(error               ((t (:foreground ,flexoki-red :bold t))))
-     `(success             ((t (:foreground ,flexoki-green :bold t))))
-     `(warning             ((t (:foreground ,flexoki-yellow :bold t))))
-     `(alert-low-face      ((t (:foreground ,flexoki-orange))))
-     `(escape-glyph        ((t (:foreground ,flexoki-cyan))))
-     `(highlight           ((t (:background ,flexoki-highlight))))
-     `(homoglyph           ((t (:foreground ,flexoki-blue))))
-     `(match               ((t (:foreground ,flexoki-lowlight :background ,flexoki-blue))))
+     `(error               ((t (:foreground ,flexoki-themes-red :bold t))))
+     `(success             ((t (:foreground ,flexoki-themes-green :bold t))))
+     `(warning             ((t (:foreground ,flexoki-themes-yellow :bold t))))
+     `(alert-low-face      ((t (:foreground ,flexoki-themes-orange))))
+     `(escape-glyph        ((t (:foreground ,flexoki-themes-cyan))))
+     `(highlight           ((t (:background ,flexoki-themes-highlight))))
+     `(homoglyph           ((t (:foreground ,flexoki-themes-blue))))
+     `(match               ((t (:foreground ,flexoki-themes-lowlight :background ,flexoki-themes-blue))))
      
 ;;;;; built-in syntax (font-lock)
 
      `(font-lock-keyword-face
-       ((t (:foreground ,flexoki-magenta :weight bold))))
+       ((t (:foreground ,flexoki-themes-magenta :weight bold))))
      `(font-lock-builtin-face
-       ((t (:foreground ,flexoki-fg :weight bold))))
+       ((t (:foreground ,flexoki-themes-fg :weight bold))))
      `(font-lock-constant-face
-       ((t (:foreground ,flexoki-orange :weight light))))
+       ((t (:foreground ,flexoki-themes-orange :weight light))))
      `(font-lock-comment-face
-       ((t (:foreground ,flexoki-meek
-		 :slant ,(if flexoki-theme-set-italic-comments 'italic 'normal)
+       ((t (:foreground ,flexoki-themes-meek
+		 :slant ,(if flexoki-themes-set-italic-comments 'italic 'normal)
 		 :weight normal))))
      `(font-lock-function-name-face
-       ((t (:foreground ,flexoki-cyan :weight bold))))
+       ((t (:foreground ,flexoki-themes-cyan :weight bold))))
      `(font-lock-keyword-face
-       ((t (:foreground ,flexoki-fg
+       ((t (:foreground ,flexoki-themes-fg
 		 :weight light
-		 :slant ,(if flexoki-theme-set-italic-keywords 'italic 'normal)))))
+		 :slant ,(if flexoki-themes-set-italic-keywords 'italic 'normal)))))
      `(font-lock-string-face
-       ((t (:foreground ,flexoki-cyan))))
+       ((t (:foreground ,flexoki-themes-cyan))))
      `(font-lock-variable-name-face
-       ((t (:foreground ,flexoki-blue :weight light))))
+       ((t (:foreground ,flexoki-themes-blue :weight light))))
      `(font-lock-type-face
-       ((t (:foreground ,flexoki-green :weight bold))))
+       ((t (:foreground ,flexoki-themes-green :weight bold))))
      `(font-lock-warning-face
-       ((t (:foreground ,flexoki-yellow :weight bold))))
+       ((t (:foreground ,flexoki-themes-yellow :weight bold))))
      `(font-lock-preprocessor-face
-       ((t (:foreground ,flexoki-fg :weight medium))))
+       ((t (:foreground ,flexoki-themes-fg :weight medium))))
 
 ;;;;; Childframes
 ;;;;;; Mini-Frame
@@ -253,90 +254,90 @@
      `(transient-posframe-border
        ((t (:background ,flexoki-faint-bg))))
      `(transient-posframe
-       ((t (:foreground ,flexoki-highlight :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-themes-highlight :background ,flexoki-faint-bg))))
 
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
      `(completions-annotations
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
 
 ;;;;;; Company-mode
      `(company-scrollbar-bg
        ((t (:background ,flexoki-faint-bg))))
      `(company-scrollbar-fg
-       ((t (:background ,flexoki-meek))))
+       ((t (:background ,flexoki-themes-meek))))
      `(company-tooltip
-       ((t (:background ,flexoki-meek))))
+       ((t (:background ,flexoki-themes-meek))))
      `(company-tooltip-annotation
-       ((t (:foreground ,flexoki-green))))
+       ((t (:foreground ,flexoki-themes-green))))
      `(company-tooltip-annotation-selection
        ((t (:inherit    company-tooltip-annotation))))
      `(company-tooltip-selection
-       ((t (:foreground ,flexoki-purple :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-themes-purple :background ,flexoki-faint-bg))))
      `(company-tooltip-common
-       ((t (:foreground ,flexoki-blue :underline t))))
+       ((t (:foreground ,flexoki-themes-blue :underline t))))
      `(company-tooltip-common-selection
-       ((t (:foreground ,flexoki-blue :underline t))))
+       ((t (:foreground ,flexoki-themes-blue :underline t))))
      `(company-preview-common
-       ((t (:foreground ,flexoki-highlight))))
+       ((t (:foreground ,flexoki-themes-highlight))))
      `(company-preview
-       ((t (:background ,flexoki-blue))))
+       ((t (:background ,flexoki-themes-blue))))
      `(company-preview-search
-       ((t (:background ,flexoki-cyan))))
+       ((t (:background ,flexoki-themes-cyan))))
      `(company-template-field
-       ((t (:foreground ,flexoki-colour-black :background ,flexoki-yellow))))
+       ((t (:foreground ,flexoki-colour-black :background ,flexoki-themes-yellow))))
      `(company-echo-common
-       ((t (:foreground ,flexoki-red))))
+       ((t (:foreground ,flexoki-themes-red))))
 
 ;;;;;; Corfu
      `(corfu-annotations
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
      `(corfu-bar
-       ((t (:foreground ,flexoki-ultralight))))
+       ((t (:foreground ,flexoki-themes-ultralight))))
      `(corfu-border
        ((t (:foreground ,flexoki-faint-bg))))
      `(corfu-current
-       ((t (:foreground ,flexoki-yellow :background ,flexoki-lowlight))))
+       ((t (:foreground ,flexoki-themes-yellow :background ,flexoki-themes-lowlight))))
      `(corfu-default
        ((t (:inherit default :background ,flexoki-faint-bg))))
      `(corfu-deprecated
-       ((t (:foreground ,flexoki-highlight))))
+       ((t (:foreground ,flexoki-themes-highlight))))
      `(corfu-echo
        ((t (:inherit default))))
 
 ;;;;;; Vertico
      `(vertico-current
-       ((t (:weight bold :background ,flexoki-lowlight))))
+       ((t (:weight bold :background ,flexoki-themes-lowlight))))
      `(vertico-group-separator
-       ((t (:foreground ,flexoki-ultralight :strike-through t))))
+       ((t (:foreground ,flexoki-themes-ultralight :strike-through t))))
      `(vertico-multiline
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
      `(vertico-group-title
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
 
 ;;;;; Diffs & VC
 
 ;;;;;; Diff
      `(diff-header
-       ((t (:foreground ,flexoki-fg))))
+       ((t (:foreground ,flexoki-themes-fg))))
      `(diff-file-header
-       ((t (:foreground ,flexoki-fg))))
+       ((t (:foreground ,flexoki-themes-fg))))
      `(diff-hunk-header
-       ((t (:foreground ,flexoki-fg))))
+       ((t (:foreground ,flexoki-themes-fg))))
      `(diff-context
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(diff-changed
-       ((t (:background unspecified :foreground ,flexoki-blue))))
+       ((t (:background unspecified :foreground ,flexoki-themes-blue))))
      `(diff-refine-changed
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-themes-blue))))
      `(diff-added
-       ((t (:background unspecified :foreground ,flexoki-green))))
+       ((t (:background unspecified :foreground ,flexoki-themes-green))))
      `(diff-refine-added
-       ((t (:background unspecified :foreground ,flexoki-green))))
+       ((t (:background unspecified :foreground ,flexoki-themes-green))))
      `(diff-removed
-       ((t (:background unspecified :foreground ,flexoki-red))))
+       ((t (:background unspecified :foreground ,flexoki-themes-red))))
      `(diff-refine-removed
-       ((t (:background unspecified :foreground ,flexoki-meek :strike-through t))))
+       ((t (:background unspecified :foreground ,flexoki-themes-meek :strike-through t))))
      `(diff-indicator-changed
        ((t (:inherit diff-changed))))
      `(diff-indicator-added
@@ -345,19 +346,19 @@
        ((t (:inherit diff-removed))))
 
 ;;;;;; Diff-hl
-     `(diff-hl-change ((t (:inherit default :foreground ,flexoki-blue ))))
-     `(diff-hl-delete ((t (:inherit default :foreground ,flexoki-red  ))))
-     `(diff-hl-insert ((t (:inherit default :foreground ,flexoki-green))))
+     `(diff-hl-change ((t (:inherit default :foreground ,flexoki-themes-blue ))))
+     `(diff-hl-delete ((t (:inherit default :foreground ,flexoki-themes-red  ))))
+     `(diff-hl-insert ((t (:inherit default :foreground ,flexoki-themes-green))))
 
 ;;;;;; Ediff
      `(ediff-even-diff-A
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(ediff-even-diff-B
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(ediff-even-diff-C
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(ediff-even-diff-Ancestor
-       ((t (:background ,flexoki-lowlight))))
+       ((t (:background ,flexoki-themes-lowlight))))
      `(ediff-odd-diff-A
        ((t (:background ,flexoki-faint-bg))))
      `(ediff-odd-diff-B
@@ -369,57 +370,57 @@
 
 ;;;;;; Magit
      `(magit-header-line
-       ((t (:foreground ,flexoki-fg :background ,flexoki-highlight))))
+       ((t (:foreground ,flexoki-themes-fg :background ,flexoki-themes-highlight))))
      `(magit-header-line-log-select
-       ((t (:foreground ,flexoki-fg :background ,flexoki-highlight))))
+       ((t (:foreground ,flexoki-themes-fg :background ,flexoki-themes-highlight))))
      `(magit-section-heading
-       ((t (:foreground ,flexoki-meek :height 1.2))))
+       ((t (:foreground ,flexoki-themes-meek :height 1.2))))
      `(magit-dimmed
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
      `(magit-blame-dimmed
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
 
 ;;;;;; Rainbow delimiters
      `(rainbow-delimiters-depth-1-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-themes-blue))))
      `(rainbow-delimiters-depth-2-face
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(rainbow-delimiters-depth-3-face
-       ((t (:foreground ,flexoki-orange))))
+       ((t (:foreground ,flexoki-themes-orange))))
      `(rainbow-delimiters-depth-4-face
-       ((t (:foreground ,flexoki-yellow))))
+       ((t (:foreground ,flexoki-themes-yellow))))
      `(rainbow-delimiters-depth-5-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-themes-blue))))
      `(rainbow-delimiters-depth-6-face
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(rainbow-delimiters-depth-7-face
-       ((t (:foreground ,flexoki-orange))))
+       ((t (:foreground ,flexoki-themes-orange))))
      `(rainbow-delimiters-depth-8-face
-       ((t (:foreground ,flexoki-yellow))))
+       ((t (:foreground ,flexoki-themes-yellow))))
      `(rainbow-delimiters-depth-9-face
-       ((t (:foreground ,flexoki-blue))))
+       ((t (:foreground ,flexoki-themes-blue))))
      `(rainbow-delimiters-depth-10-face
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(rainbow-delimiters-depth-11-face
-       ((t (:foreground ,flexoki-orange))))
+       ((t (:foreground ,flexoki-themes-orange))))
      `(rainbow-delimiters-depth-12-face
-       ((t (:foreground ,flexoki-yellow))))
+       ((t (:foreground ,flexoki-themes-yellow))))
      `(rainbow-delimiters-unmatched-face
-       ((t (:background ,flexoki-bg :foreground ,flexoki-red :weight bold))))
+       ((t (:background ,flexoki-themes-bg :foreground ,flexoki-themes-red :weight bold))))
 
 ;;;;;; Outline
      `(outline-minor-0
-       ((t (:background ,flexoki-lowlight :height 1.1))))
+       ((t (:background ,flexoki-themes-lowlight :height 1.1))))
      `(outline-1
-       ((t (:inherit 'default :foreground ,flexoki-blue :weight semi-bold))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-blue :weight semi-bold))))
      `(outline-2
-       ((t (:inherit 'default :foreground ,flexoki-purple :weight semi-bold))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-purple :weight semi-bold))))
      `(outline-3
-       ((t (:inherit 'default :foreground ,flexoki-orange :weight semi-bold))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-orange :weight semi-bold))))
      `(outline-4
-       ((t (:inherit 'default :foreground ,flexoki-magenta :weight semi-bold))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-magenta :weight semi-bold))))
      `(outline-5
-       ((t (:inherit 'default :foreground ,flexoki-cyan :weight semi-bold))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-cyan :weight semi-bold))))
      `(outline-6
        ((t (:inherit outline-1))))
      `(outline-7
@@ -429,56 +430,55 @@
 
 ;;;;;; Modeline
      `(mode-line
-       ((t (:foreground ,flexoki-fg :background ,flexoki-faint-bg
-	    :box (:line-width 1 :color ,flexoki-highlight :style nil)))))
+       ((t (:foreground ,flexoki-themes-fg :background ,flexoki-faint-bg
+	    :box (:line-width 1 :color ,flexoki-themes-highlight :style nil)))))
      `(mode-line-inactive
-       ((t (:foreground ,flexoki-meek :background ,flexoki-lowlight
-	    :box (:line-width 1 :color ,flexoki-highlight :style nil)))))
+       ((t (:foreground ,flexoki-themes-meek :background ,flexoki-themes-lowlight
+	    :box (:line-width 1 :color ,flexoki-themes-highlight :style nil)))))
 
 ;;;;;; Org-mode
      `(org-todo
-       ((t (:inherit outline-1 :foreground ,flexoki-red))))
+       ((t (:inherit outline-1 :foreground ,flexoki-themes-red))))
 
 ;;;;;; Eshell
      `(eshell-prompt
-       ((t (:foreground ,flexoki-yellow))))
+       ((t (:foreground ,flexoki-themes-yellow))))
      `(eshell-ls-archive
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
      `(eshell-ls-backup
-       ((t (:foreground ,flexoki-meek))))
+       ((t (:foreground ,flexoki-themes-meek))))
      `(eshell-ls-clutter
-       ((t (:foreground ,flexoki-orange :weight bold))))
+       ((t (:foreground ,flexoki-themes-orange :weight bold))))
      `(eshell-ls-directory
-       ((t (:foreground ,flexoki-blue :weight bold))))
+       ((t (:foreground ,flexoki-themes-blue :weight bold))))
      `(eshell-ls-executable
        ((t (:weight bold))))
      `(eshell-ls-missing
-       ((t (:foreground ,flexoki-red :bold t))))
+       ((t (:foreground ,flexoki-themes-red :bold t))))
      `(eshell-ls-product
-       ((t (:foreground ,flexoki-red))))
+       ((t (:foreground ,flexoki-themes-red))))
      `(eshell-ls-readonly
-       ((t (:backgtround ,flexoki-highlight :foreground ,flexoki-meek :weight light))))
+       ((t (:background ,flexoki-themes-highlight :foreground ,flexoki-themes-meek :weight light))))
      `(eshell-ls-special
-       ((t (:foreground ,flexoki-yellow :bold t))))
+       ((t (:foreground ,flexoki-themes-yellow :bold t))))
      `(eshell-ls-symlink
-       ((t (:foreground ,flexoki-red))))
+       ((t (:foreground ,flexoki-themes-red))))
      `(eshell-ls-unreadable
-       ((t (:foreground ,flexoki-red :bold t))))
+       ((t (:foreground ,flexoki-themes-red :bold t))))
 
 ;;;;;; Shell script
      `(sh-quoted-exec
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(sh-heredoc
-       ((t (:foreground ,flexoki-orange))))
+       ((t (:foreground ,flexoki-themes-orange))))
 
 ;;;;;; js2-mode
      `(js2-function-call
-       ((t (:foreground ,flexoki-green))))
+       ((t (:foreground ,flexoki-themes-green))))
      `(js2-object-property
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(js2-object-property-access
-       ((t (:inherit js2-object-property))))
-     )))
+       ((t (:inherit js2-object-property)))))))
 
 ;;;###autoload
 (and load-file-name
@@ -487,6 +487,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide 'flexoki-theme)
+(provide 'flexoki-themes)
 
-;;; flexoki-theme.el ends here
+;;; flexoki-themes.el ends here

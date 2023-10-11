@@ -13,20 +13,20 @@
 
 ;;; Commentary:
 ;;
-;; The `flexoki-theme' is a pair of light and dark themes for GNU
+;; The `flexoki-themes' is a pair of light and dark themes for GNU
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
-(require 'flexoki-theme)
+(require 'flexoki-themes)
 
 (deftheme flexoki-light "Flexoki theme, light version")
 
-(flexoki-theme-create 'light 'flexoki-light)
+(flexoki-themes-create 'light 'flexoki-light)
 
-(run-hooks 'flexoki-theme-after-load-theme-hook)
+(run-hooks 'flexoki-themes-after-load-theme-hook)
 
 (provide-theme 'flexoki-light)
 
 (provide 'flexoki-light-theme)
 
-;;; lambda-light-theme.el ends here
+;;; flexoki-light-theme.el ends here
