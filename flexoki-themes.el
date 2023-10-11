@@ -256,6 +256,12 @@
      `(transient-posframe
        ((t (:foreground ,flexoki-themes-highlight :background ,flexoki-faint-bg))))
 
+;;;;; Line number
+     `(line-number
+       ((t (:foreground ,flexoki-themes-lowlight))))
+     `(line-number-current-line
+       ((t (:inherit line-number :foreground ,flexoki-themes-magenta))))
+
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
      `(completions-annotations
