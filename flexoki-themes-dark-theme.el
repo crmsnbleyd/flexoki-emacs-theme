@@ -1,4 +1,4 @@
-;;; flexoki-light-theme.el --- Light variant of flexoki-theme -*- lexical-binding:t -*-
+;;; flexoki-dark-theme.el --- Dark variant of flexoki-theme -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
@@ -17,16 +17,14 @@
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
-(require 'flexoki-themes)
+(deftheme flexoki-themes-dark "Flexoki theme, dark version.")
 
-(deftheme flexoki-light "Flexoki theme, light version.")
-
-(flexoki-themes-create 'light 'flexoki-themes-light)
+(flexoki-themes-create 'dark 'flexoki-themes-dark)
 
 (run-hooks 'flexoki-themes-after-load-theme-hook)
 
-(provide-theme 'flexoki-light)
+(provide-theme 'flexoki-themes-dark)
 
-(provide 'flexoki-light-theme)
+(provide 'flexoki-themes-dark-theme)
 
-;;; flexoki-light-theme.el ends here
+;;; flexoki-dark-theme.el ends here
