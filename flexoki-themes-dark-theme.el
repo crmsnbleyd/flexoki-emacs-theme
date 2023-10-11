@@ -27,4 +27,4 @@
 
 (provide 'flexoki-themes-dark-theme)
 
-;;; flexoki-dark-theme.el ends here
+;;; flexoki-themes-dark-theme.el ends here
