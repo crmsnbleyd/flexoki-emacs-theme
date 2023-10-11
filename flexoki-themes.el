@@ -30,7 +30,7 @@
 
 (defconst flexoki-themes-variants
   '(dark light)
-  "Symbols of the flexoki themes")
+  "Symbols of the flexoki themes.")
 
 (defcustom flexoki-themes-custom-colours nil
   "Specify a list of custom colours."
@@ -86,7 +86,7 @@
   "Hook run after flexoki-themes is loaded using `load-theme'.")
 
 (defun flexoki-themes-create (variant theme-name)
-  "Define theme with THEME-NAME using VARIANT settings"
+  "Define theme with THEME-NAME using VARIANT settings."
   (let*
       ((flexoki-colour-black "#100f0f")
        (flexoki-colour-900   "#232726")
