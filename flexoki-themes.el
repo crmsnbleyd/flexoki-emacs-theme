@@ -155,7 +155,7 @@
      `(buffer-menu-buffer
        ((t (:background ,flexoki-themes-fg))))
      `(minibuffer-prompt
-       ((t (:background ,flexoki-themes-yellow))))
+       ((t (:foreground ,flexoki-themes-purple :weight semi-bold))))
      `(vertical-border
        ((t (:foreground ,flexoki-themes-fg))))
      `(internal-border
