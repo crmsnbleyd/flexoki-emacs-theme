@@ -14,7 +14,7 @@
 
 ;;; Commentary:
 ;;
-;; The `flexoki-themess' is a pair of light and dark themes for GNU
+;; The `flexoki-themes' is a pair of light and dark themes for GNU
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
@@ -427,6 +427,34 @@
        ((t (:inherit outline-2))))
      `(outline-8
        ((t (:inherit outline-3))))
+
+;;;;;; Markdown-mode
+     `(markdown-header-delimiter-face
+       ((t (:foreground ,flexoki-themes-highlight :weight semi-bold))))
+     `(markdown-header-face-1
+       ((t (:inherit outline-1))))
+     `(markdown-header-face-2
+       ((t (:inherit outline-2))))
+     `(markdown-header-face-3
+       ((t (:inherit outline-3))))
+     `(markdown-header-face-4
+       ((t (:inherit outline-4))))
+     `(markdown-header-face-5
+       ((t (:inherit outline-5))))
+     `(markdown-header-face-6
+       ((t (:inherit outline-6))))
+     `(markdown-url-face
+       ((t (:foreground ,flexoki-themes-cyan))))
+     `(markdown-code-face
+       ((t (:inherit default))))
+     `(markdown-footnote-marker-face
+       ((t (:foreground ,flexoki-themes-meek))))
+     `(markdown-list-face
+       ((t (:foreground ,flexoki-themes-meek))))
+     `(markdown-markup-face
+       ((t (:foreground ,flexoki-themes-lowlight))))
+     `(markdown-html-tag-delimiter-face
+       ((t (:inherit 'default))))
 
 ;;;;;; Modeline
      `(mode-line
