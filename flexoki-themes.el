@@ -1,5 +1,5 @@
 ;;; flexoki-themes.el --- An inky color scheme for prose and code -*- lexical-binding:t -*-
-;;; Version: 0.11
+;;; Version: 0.12
 
 ;; Copyright (C) 2023 Andrew Jose, Steph Ango
 
@@ -101,7 +101,7 @@
        (flexoki-themes-bg
 	(if (eq variant 'light)
 	    flexoki-colour-paper flexoki-colour-black))
-       (flexoki-faint-bg
+       (flexoki-themes-faint-bg
 	(if (eq variant 'light)
 	    flexoki-colour-100 flexoki-colour-900))
        (flexoki-themes-fg
