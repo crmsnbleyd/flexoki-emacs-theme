@@ -390,27 +390,27 @@
      `(rainbow-delimiters-depth-1-face
        ((t (:foreground ,flexoki-themes-blue))))
      `(rainbow-delimiters-depth-2-face
-       ((t (:foreground ,flexoki-themes-purple))))
-     `(rainbow-delimiters-depth-3-face
        ((t (:foreground ,flexoki-themes-orange))))
+     `(rainbow-delimiters-depth-3-face
+       ((t (:foreground ,flexoki-themes-purple))))
      `(rainbow-delimiters-depth-4-face
        ((t (:foreground ,flexoki-themes-yellow))))
      `(rainbow-delimiters-depth-5-face
-       ((t (:foreground ,flexoki-themes-blue))))
+       ((t (:foreground ,flexoki-themes-cyan))))
      `(rainbow-delimiters-depth-6-face
-       ((t (:foreground ,flexoki-themes-purple))))
+       ((t (:foreground ,flexoki-themes-magenta))))
      `(rainbow-delimiters-depth-7-face
-       ((t (:foreground ,flexoki-themes-orange))))
+       ((t (:inherit rainbow-delimiters-depth-1-face))))
      `(rainbow-delimiters-depth-8-face
-       ((t (:foreground ,flexoki-themes-yellow))))
+       ((t (:inherit rainbow-delimiters-depth-2-face))))
      `(rainbow-delimiters-depth-9-face
-       ((t (:foreground ,flexoki-themes-blue))))
+       ((t (:inherit rainbow-delimiters-depth-3-face))))
      `(rainbow-delimiters-depth-10-face
-       ((t (:foreground ,flexoki-themes-purple))))
+       ((t (:inherit rainbow-delimiters-depth-4-face))))
      `(rainbow-delimiters-depth-11-face
-       ((t (:foreground ,flexoki-themes-orange))))
+       ((t (:inherit rainbow-delimiters-depth-5-face))))
      `(rainbow-delimiters-depth-12-face
-       ((t (:foreground ,flexoki-themes-yellow))))
+       ((t (:inherit rainbow-delimiters-depth-6-face))))
      `(rainbow-delimiters-unmatched-face
        ((t (:background ,flexoki-themes-bg :foreground ,flexoki-themes-red :weight bold))))
 
