@@ -44,7 +44,7 @@
 
 (defcustom flexoki-themes-set-italic-comments t
   "If t then use italics for comments."
-  :group 'flexoki-theme
+  :group 'flexoki-themes
   :type 'boolean)
 
 (defcustom flexoki-themes-set-italic-keywords t
