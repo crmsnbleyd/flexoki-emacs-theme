@@ -485,6 +485,12 @@
        ((t (:foreground ,flexoki-themes-lowlight))))
      `(org-checkbox
        ((t (:foreground ,flexoki-themes-green :weight semi-bold))))
+     `(org-table
+       ((t (:foreground ,flexoki-themes-purple))))
+     `(org-document-info
+       ((t (:foreground ,flexoki-themes-cyan))))
+     `(org-document-title
+       ((t (:inherit org-document-info :weight bold))))
      
 ;;;;;; Eshell
      `(eshell-prompt

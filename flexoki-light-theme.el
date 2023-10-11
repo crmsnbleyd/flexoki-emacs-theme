@@ -19,9 +19,9 @@
 ;;; Code:
 (require 'flexoki-themes)
 
-(deftheme flexoki-light "Flexoki theme, light version")
+(deftheme flexoki-light "Flexoki theme, light version.")
 
-(flexoki-themes-create 'light 'flexoki-light)
+(flexoki-themes-create 'light 'flexoki-themes-light)
 
 (run-hooks 'flexoki-themes-after-load-theme-hook)
 
