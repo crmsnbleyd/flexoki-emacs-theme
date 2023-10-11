@@ -258,7 +258,7 @@
 
 ;;;;; Line number
      `(line-number
-       ((t (:foreground ,flexoki-themes-lowlight))))
+       ((t (:inherit 'default :foreground ,flexoki-themes-lowlight))))
      `(line-number-current-line
        ((t (:inherit line-number :foreground ,flexoki-themes-magenta))))
 
