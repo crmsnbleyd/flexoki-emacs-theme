@@ -6,3 +6,9 @@ This theme is only available on this repository for now.
 ** Contributing
 If you wish to add support for a mode, feel free to open a pull request with the
 changes made along with a screenshot showing the mode in action.
+
+** Screenshots
+#+caption: Flexoki dark variant
+[[https://github.com/crmsnbleyd/flexoki-emacs-theme/blob/trunk/screenshots/flexoki-dark.png]]
+#+caption: Flexoki light variant
+[[https://github.com/crmsnbleyd/flexoki-emacs-theme/blob/trunk/screenshots/flexoki-light.png]]

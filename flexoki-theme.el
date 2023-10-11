@@ -226,7 +226,7 @@
 		 :weight light
 		 :slant ,(if flexoki-theme-set-italic-keywords 'italic 'normal)))))
      `(font-lock-string-face
-       ((t (:foreground ,flexoki-cyan :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-cyan))))
      `(font-lock-variable-name-face
        ((t (:foreground ,flexoki-blue :weight light))))
      `(font-lock-type-face
