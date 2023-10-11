@@ -139,7 +139,6 @@
     
     (custom-theme-set-faces
      theme-name
-
      `(default
        ((t (:background ,flexoki-bg :foreground ,flexoki-fg))))
      `(cursor
@@ -211,7 +210,7 @@
 ;;;;; built-in syntax (font-lock)
 
      `(font-lock-keyword-face
-       ((t (:foreground ,flexoki-purple))))
+       ((t (:foreground ,flexoki-magenta :weight bold))))
      `(font-lock-builtin-face
        ((t (:foreground ,flexoki-fg :weight bold))))
      `(font-lock-constant-face
@@ -227,9 +226,9 @@
 		 :weight light
 		 :slant ,(if flexoki-theme-set-italic-keywords 'italic 'normal)))))
      `(font-lock-string-face
-       ((t (:foreground ,flexoki-fg :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-cyan :background ,flexoki-faint-bg))))
      `(font-lock-variable-name-face
-       ((t (:foreground ,flexoki-orange :weight light))))
+       ((t (:foreground ,flexoki-blue :weight light))))
      `(font-lock-type-face
        ((t (:foreground ,flexoki-green :weight bold))))
      `(font-lock-warning-face
@@ -428,9 +427,17 @@
      `(outline-8
        ((t (:inherit outline-3))))
 
+;;;;;; Modeline
+     `(mode-line
+       ((t (:foreground ,flexoki-fg :background ,flexoki-faint-bg
+	    :box (:line-width 1 :color ,flexoki-highlight :style nil)))))
+     `(mode-line-inactive
+       ((t (:foreground ,flexoki-meek :background ,flexoki-lowlight
+	    :box (:line-width 1 :color ,flexoki-highlight :style nil)))))
+
 ;;;;;; Org-mode
      `(org-todo
-       ((t (:inherit 'default :foreground ,flexoki-red :weight bold))))
+       ((t (:inherit outline-1 :foreground ,flexoki-red))))
 
 ;;;;;; Eshell
      `(eshell-prompt
@@ -463,6 +470,14 @@
        ((t (:foreground ,flexoki-purple))))
      `(sh-heredoc
        ((t (:foreground ,flexoki-orange))))
+
+;;;;;; js2-mode
+     `(js2-function-call
+       ((t (:foreground ,flexoki-green))))
+     `(js2-object-property
+       ((t (:foreground ,flexoki-purple))))
+     `(js2-object-property-access
+       ((t (:inherit js2-object-property))))
      )))
 
 ;;;###autoload
