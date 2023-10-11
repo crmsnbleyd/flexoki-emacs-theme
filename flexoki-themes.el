@@ -184,7 +184,7 @@
      ;; should be a better way to do this but...
      `(flexoki-themes-fg          ((t (:foreground ,flexoki-themes-fg))))
      `(flexoki-themes-bg          ((t (:background ,flexoki-themes-bg))))
-     `(flexoki-faint-bg    ((t (:background ,flexoki-faint-bg))))
+     `(flexoki-themes-faint-bg    ((t (:background ,flexoki-themes-faint-bg))))
      `(flexoki-themes-ultralight  ((t (:background ,flexoki-themes-ultralight))))
      `(flexoki-themes-highlight   ((t (:foreground ,flexoki-themes-highlight))))
      `(flexoki-themes-lowlight    ((t (:foreground ,flexoki-themes-lowlight))))
@@ -239,22 +239,22 @@
 
 ;;;;; Childframes
 ;;;;;; Mini-Frame
-     `(mini-popup-background ((t (:background ,flexoki-faint-bg))))
-     `(mini-popup-border     ((t (:background ,flexoki-faint-bg))))
+     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
+     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
 
 ;;;;;; Mini-Popup (Childframe)
-     `(mini-popup-background ((t (:background ,flexoki-faint-bg))))
-     `(mini-popup-border     ((t (:background ,flexoki-faint-bg))))
+     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
+     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
 
 ;;;;;; Posframe
      `(which-key-posframe
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(which-key-posframe-border
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(transient-posframe-border
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(transient-posframe
-       ((t (:foreground ,flexoki-themes-highlight :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-themes-highlight :background ,flexoki-themes-faint-bg))))
 
 ;;;;; Line number
      `(line-number
@@ -269,7 +269,7 @@
 
 ;;;;;; Company-mode
      `(company-scrollbar-bg
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(company-scrollbar-fg
        ((t (:background ,flexoki-themes-meek))))
      `(company-tooltip
@@ -279,7 +279,7 @@
      `(company-tooltip-annotation-selection
        ((t (:inherit    company-tooltip-annotation))))
      `(company-tooltip-selection
-       ((t (:foreground ,flexoki-themes-purple :background ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-themes-purple :background ,flexoki-themes-faint-bg))))
      `(company-tooltip-common
        ((t (:foreground ,flexoki-themes-blue :underline t))))
      `(company-tooltip-common-selection
@@ -301,11 +301,11 @@
      `(corfu-bar
        ((t (:foreground ,flexoki-themes-ultralight))))
      `(corfu-border
-       ((t (:foreground ,flexoki-faint-bg))))
+       ((t (:foreground ,flexoki-themes-faint-bg))))
      `(corfu-current
        ((t (:foreground ,flexoki-themes-yellow :background ,flexoki-themes-lowlight))))
      `(corfu-default
-       ((t (:inherit default :background ,flexoki-faint-bg))))
+       ((t (:inherit default :background ,flexoki-themes-faint-bg))))
      `(corfu-deprecated
        ((t (:foreground ,flexoki-themes-highlight))))
      `(corfu-echo
@@ -366,13 +366,13 @@
      `(ediff-even-diff-Ancestor
        ((t (:background ,flexoki-themes-lowlight))))
      `(ediff-odd-diff-A
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(ediff-odd-diff-B
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(ediff-odd-diff-C
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
      `(ediff-odd-diff-Ancestor
-       ((t (:background ,flexoki-faint-bg))))
+       ((t (:background ,flexoki-themes-faint-bg))))
 
 ;;;;;; Magit
      `(magit-header-line
@@ -468,7 +468,7 @@
 
 ;;;;;; Modeline
      `(mode-line
-       ((t (:foreground ,flexoki-themes-fg :background ,flexoki-faint-bg
+       ((t (:foreground ,flexoki-themes-fg :background ,flexoki-themes-faint-bg
 	    :box (:line-width 1 :color ,flexoki-themes-highlight :style nil)))))
      `(mode-line-inactive
        ((t (:foreground ,flexoki-themes-meek :background ,flexoki-themes-lowlight
