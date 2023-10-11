@@ -242,7 +242,7 @@
      `(mini-popup-background ((t (:background ,flexoki-faint-bg))))
      `(mini-popup-border     ((t (:background ,flexoki-faint-bg))))
 
-     `;;;;;; Mini-Popup (Childframe)
+;;;;;; Mini-Popup (Childframe)
      `(mini-popup-background ((t (:background ,flexoki-faint-bg))))
      `(mini-popup-border     ((t (:background ,flexoki-faint-bg))))
 
@@ -462,6 +462,10 @@
      `(markdown-html-tag-delimiter-face
        ((t (:inherit 'default))))
 
+;;;;;; Comint
+     `(comint-highlight-prompt
+       ((t (:foreground ,flexoki-themes-yellow :weight semi-bold))))
+
 ;;;;;; Modeline
      `(mode-line
        ((t (:foreground ,flexoki-themes-fg :background ,flexoki-faint-bg
@@ -473,7 +477,7 @@
 ;;;;;; Org-mode
      `(org-todo
        ((t (:inherit outline-1 :foreground ,flexoki-themes-red))))
-
+     
 ;;;;;; Eshell
      `(eshell-prompt
        ((t (:foreground ,flexoki-themes-yellow))))
