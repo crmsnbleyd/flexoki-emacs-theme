@@ -475,8 +475,16 @@
 	    :box (:line-width 1 :color ,flexoki-themes-highlight :style nil)))))
 
 ;;;;;; Org-mode
+     `(org-date
+       ((t (:foreground ,flexoki-themes-purple :underline t ))))
      `(org-todo
        ((t (:inherit outline-1 :foreground ,flexoki-themes-red))))
+     `(org-done
+       ((t (:inherit outline-1 :foreground ,flexoki-themes-lowlight))))
+     `(org-headline-done
+       ((t (:foreground ,flexoki-themes-lowlight))))
+     `(org-checkbox
+       ((t (:foreground ,flexoki-themes-green :weight semi-bold))))
      
 ;;;;;; Eshell
      `(eshell-prompt
