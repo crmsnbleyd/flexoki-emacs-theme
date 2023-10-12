@@ -475,6 +475,8 @@
 	    :box (:line-width 1 :color ,flexoki-themes-highlight :style nil)))))
 
 ;;;;;; Org-mode
+     `(org-block
+       ((t (:inherit 'default :background ,flexoki-themes-faint-bg))))
      `(org-date
        ((t (:foreground ,flexoki-themes-purple :underline t ))))
      `(org-todo
