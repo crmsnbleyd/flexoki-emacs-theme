@@ -477,6 +477,8 @@
 ;;;;;; Org-mode
      `(org-block
        ((t (:inherit 'default :background ,flexoki-themes-faint-bg))))
+     `(org-code
+       ((t (:inherit 'default :foreground ,flexoki-themes-orange))))
      `(org-date
        ((t (:foreground ,flexoki-themes-purple :underline t ))))
      `(org-todo
