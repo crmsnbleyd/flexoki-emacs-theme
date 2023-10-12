@@ -1,7 +1,17 @@
 This repository contains emacs versions of the dark and light flexoki theme by Steph Ango, available at
 [[https://stephango.com/flexoki]]
 
+** Installation
 This theme is only available on this repository for now.
+Installing using [[https://github.com/radian-software/straight.el][straight]] + use-package
+#+begin_src emacs-lisp
+(use-package flexoki-themes
+  :straight (flexoki-themes :type git
+			    :host github
+			    :repo "crmsnbleyd/flexoki-emacs-theme"
+			    :branch "trunk")
+  :config (load-theme 'flexoki-themes-light t))
+#+end_src
 
 ** Contributing
 If you wish to add support for a mode, feel free to open a pull request with the
