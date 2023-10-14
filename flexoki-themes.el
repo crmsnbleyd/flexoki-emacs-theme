@@ -459,6 +459,10 @@
        ((t (:foreground ,flexoki-themes-meek))))
      `(markdown-markup-face
        ((t (:foreground ,flexoki-themes-lowlight))))
+     `(markdown-inline-code-face
+       ((t (:foreground ,flexoki-themes-orange))))
+     `(markdown-italic-face
+       ((t (:foreground ,flexoki-themes-purple))))
      `(markdown-html-tag-delimiter-face
        ((t (:inherit 'default))))
 
