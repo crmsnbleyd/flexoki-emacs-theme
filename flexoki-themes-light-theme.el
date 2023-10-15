@@ -6,7 +6,6 @@
 ;; Author: Andrew Jose <arnav.jose@gmail.com>
 ;; Maintainer: Andrew Jose <arnav.jose@gmail.com>
 ;; URL: https://github.com/crmsnbleyd/flexoki-emacs-theme
-;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: faces, theme
 
 ;; This file is NOT part of GNU Emacs.
@@ -17,6 +16,8 @@
 ;; Emacs based on the Flexoki colour scheme by Steph Ango.
 
 ;;; Code:
+(require 'flexoki-themes)
+
 (deftheme flexoki-themes-light "Flexoki theme, light version.")
 
 (flexoki-themes-create 'light 'flexoki-themes-light)
