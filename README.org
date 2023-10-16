@@ -2,15 +2,13 @@ This repository contains emacs versions of the dark and light flexoki theme by S
 [[https://stephango.com/flexoki]]
 
 ** Installation
-This theme is only available on this repository for now.
-Installing using [[https://github.com/radian-software/straight.el][straight]] + use-package
+[[https://melpa.org/#/flexoki-themes][file:https://melpa.org/packages/flexoki-themes-badge.svg]]
+The theme is available on [[https://melpa.org/#/flexoki-themes][MELPA]]!
+Installing using use-package:
 #+begin_src emacs-lisp
-(use-package flexoki-themes
-  :straight (flexoki-themes :type git
-			    :host github
-			    :repo "crmsnbleyd/flexoki-emacs-theme"
-			    :branch "trunk")
-  :config (load-theme 'flexoki-themes-light t))
+  (use-package flexoki-themes
+    :ensure t  ;; or :straight t if using straight.el
+    :config (load-theme 'flexoki-themes-light t))
 #+end_src
 
 ** Contributing
