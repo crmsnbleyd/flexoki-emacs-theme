@@ -3,6 +3,7 @@ This repository contains emacs versions of the dark and light flexoki theme by S
 
 ** Installation
 [[https://melpa.org/#/flexoki-themes][file:https://melpa.org/packages/flexoki-themes-badge.svg]]
+
 The theme is available on [[https://melpa.org/#/flexoki-themes][MELPA]]!
 Installing using use-package:
 #+begin_src emacs-lisp
