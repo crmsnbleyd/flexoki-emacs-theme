@@ -212,7 +212,7 @@
      `(font-lock-keyword-face
        ((t (:foreground ,flexoki-themes-magenta :weight bold))))
      `(font-lock-builtin-face
-       ((t (:foreground ,flexoki-themes-fg :weight bold))))
+       ((t (:foreground ,flexoki-themes-green :weight bold))))
      `(font-lock-constant-face
        ((t (:foreground ,flexoki-themes-orange :weight light))))
      `(font-lock-comment-face
@@ -230,7 +230,7 @@
      `(font-lock-variable-name-face
        ((t (:foreground ,flexoki-themes-blue :weight light))))
      `(font-lock-type-face
-       ((t (:foreground ,flexoki-themes-green :weight bold))))
+       ((t (:foreground ,flexoki-themes-yellow :weight medium))))
      `(font-lock-warning-face
        ((t (:foreground ,flexoki-themes-yellow :weight bold))))
      `(font-lock-preprocessor-face
@@ -259,7 +259,7 @@
      `(line-number
        ((t (:inherit 'default :foreground ,flexoki-themes-lowlight))))
      `(line-number-current-line
-       ((t (:inherit line-number :foreground ,flexoki-themes-magenta))))
+       ((t (:inherit line-number :foreground ,flexoki-themes-purple))))
 
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
