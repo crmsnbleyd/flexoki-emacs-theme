@@ -567,7 +567,11 @@
        ((t (:foreground ,flexoki-themes-cyan))))
      `(org-document-title
        ((t (:inherit org-document-info :weight bold))))
-     
+
+;;;;;; Dired
+     `(dired-symlink
+       ((t (:foreground ,flexoki-themes-purple :weight bold))))
+
 ;;;;;; Eshell
      `(eshell-prompt
        ((t (:foreground ,flexoki-themes-yellow))))
