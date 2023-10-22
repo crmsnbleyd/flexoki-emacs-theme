@@ -240,14 +240,14 @@
      `(font-lock-builtin-face
        ((t (:foreground ,flexoki-themes-green :weight bold))))
      `(font-lock-constant-face
-       ((t (:foreground ,flexoki-themes-orange :weight light))))
+       ((t (:foreground ,flexoki-themes-purple :weight light))))
      `(font-lock-comment-face
        ((t (:foreground ,flexoki-themes-meek
 	    :slant ,(if flexoki-themes-set-italic-comments
 			 'italic 'normal)
 	    :weight normal))))
      `(font-lock-function-name-face
-       ((t (:foreground ,flexoki-themes-cyan :weight bold))))
+       ((t (:foreground ,flexoki-themes-orange :weight bold))))
      `(font-lock-keyword-face
        ((t (:foreground ,flexoki-themes-fg
 		 :weight light
