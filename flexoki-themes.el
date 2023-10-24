@@ -513,15 +513,17 @@
      `(markdown-url-face
        ((t (:foreground ,flexoki-themes-cyan))))
      `(markdown-code-face
-       ((t (:inherit default))))
+       ((t (:inherit org-code
+	    :background ,flexoki-themes-faint-bg
+	    :extend t))))
+     `(markdown-inline-code-face
+       ((t (:inherit org-code))))
      `(markdown-footnote-marker-face
        ((t (:foreground ,flexoki-themes-meek))))
      `(markdown-list-face
        ((t (:foreground ,flexoki-themes-meek))))
      `(markdown-markup-face
        ((t (:foreground ,flexoki-themes-lowlight))))
-     `(markdown-inline-code-face
-       ((t (:foreground ,flexoki-themes-orange))))
      `(markdown-italic-face
        ((t (:foreground ,flexoki-themes-purple))))
      `(markdown-html-tag-delimiter-face
@@ -550,7 +552,7 @@
      `(org-block
        ((t (:inherit 'default :background ,flexoki-themes-faint-bg))))
      `(org-code
-       ((t (:inherit 'default :foreground ,flexoki-themes-orange))))
+       ((t (:foreground ,flexoki-themes-purple))))
      `(org-date
        ((t (:foreground ,flexoki-themes-purple :underline t ))))
      `(org-todo
