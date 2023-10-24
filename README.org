@@ -1,9 +1,9 @@
+[[https://melpa.org/#/flexoki-themes][file:https://melpa.org/packages/flexoki-themes-badge.svg]] [[https://github.com/crmsnbleyd/flexoki-emacs-theme/blob/trunk/LICENSE][file:https://img.shields.io/badge/license-GPL_3-green.svg]]
+
 This repository contains emacs versions of the dark and light flexoki theme by Steph Ango, available at
 [[https://stephango.com/flexoki]]
 
 ** Installation
-[[https://melpa.org/#/flexoki-themes][file:https://melpa.org/packages/flexoki-themes-badge.svg]]
-
 The theme is available on [[https://melpa.org/#/flexoki-themes][MELPA]]!
 Installing using use-package:
 #+begin_src emacs-lisp
