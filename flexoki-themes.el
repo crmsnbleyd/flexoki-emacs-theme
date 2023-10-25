@@ -554,7 +554,9 @@
      `(org-code
        ((t (:foreground ,flexoki-themes-purple))))
      `(org-date
-       ((t (:foreground ,flexoki-themes-purple :underline t ))))
+       ((t (:foreground ,flexoki-themes-green :underline t ))))
+     `(org-drawer
+       ((t (:foreground ,flexoki-themes-yellow))))
      `(org-todo
        ((t (:inherit outline-1 :foreground ,flexoki-themes-red))))
      `(org-done
