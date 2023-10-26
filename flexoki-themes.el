@@ -415,6 +415,18 @@
        ((t (:background ,flexoki-themes-faint-bg))))
 
 ;;;;;; Magit
+     `(magit-branch-local
+       ((t (:foreground ,flexoki-themes-purple))))
+     `(magit-branch-remote
+       ((t (:foreground ,flexoki-themes-cyan))))
+     `(git-commit-summary
+       ((t (:foreground ,flexoki-themes-green))))
+     `(git-commit-overlong-summary
+       ((t (:foreground ,flexoki-themes-red :weight semi-bold))))
+     `(magit-dimmed
+       ((t (:foreground ,flexoki-themes-meek))))
+     `(magit-blame-dimmed
+       ((t (:foreground ,flexoki-themes-meek))))
      `(magit-header-line
        ((t (:foreground ,flexoki-themes-fg
 	    :background ,flexoki-themes-highlight))))
@@ -425,14 +437,6 @@
        ((t (:foreground ,flexoki-themes-meek :height 1.2))))
      `(magit-section-highlight
        ((t (:background ,flexoki-themes-lowlight :extend t))))
-     `(magit-dimmed
-       ((t (:foreground ,flexoki-themes-meek))))
-     `(magit-blame-dimmed
-       ((t (:foreground ,flexoki-themes-meek))))
-     `(git-commit-summary
-       ((t (:foreground ,flexoki-themes-green))))
-     `(git-commit-overlong-summary
-       ((t (:foreground ,flexoki-themes-red :weight semi-bold))))
 
 ;;;;;; Rainbow delimiters
      `(rainbow-delimiters-depth-1-face
