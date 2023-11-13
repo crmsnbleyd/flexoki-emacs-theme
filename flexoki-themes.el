@@ -614,6 +614,14 @@
      `(sh-heredoc
        ((t (:foreground ,flexoki-themes-orange))))
 
+;;;;;; uiua-mode
+     `(uiua-number
+       ((t (:foreground ,flexoki-themes-orange))))
+     `(uiua-monadic-function
+       ((t (:foreground ,flexoki-themes-green))))
+     `(uiua-noadic-or-constant
+       ((t (:foreground ,flexoki-themes-red))))
+
 ;;;;;; js2-mode
      `(js2-function-call
        ((t (:foreground ,flexoki-themes-green))))
