@@ -290,6 +290,32 @@
      `(line-number-current-line
        ((t (:inherit line-number :foreground ,flexoki-themes-purple))))
 
+;;;;; tab-bar
+     `(tab-bar ((t (:height 1.1 :foreground ,flexoki-themes-fg :background ,flexoki-themes-bg))))
+     `(tab-bar-tab
+       ((t (:background
+	    ,flexoki-themes-bg
+	    :foreground ,flexoki-themes-yellow
+	    :box (:line-width 1 :style released-button)))))
+     `(tab-bar-tab-inactive
+       ((t (:inherit
+	    tab-bar-tab
+	    :background ,flexoki-themes-lowlight
+	    :foreground ,flexoki-themes-bg))))
+
+;;;;; tab-line
+     `(tab-line ((t (:foreground ,flexoki-themes-fg :background ,flexoki-themes-bg))))
+     `(tab-line-close-highlight ((t (:foreground ,flexoki-themes-red))))
+     `(tab-line-tab
+       ((t (:background
+	    ,flexoki-themes-bg
+	    :foreground ,flexoki-themes-yellow
+	    :box (:line-width 1 :style released-button)))))
+     `(tab-line-tab-inactive
+       ((t (:inherit tab-line-tab
+	    :background ,flexoki-themes-lowlight
+	    :foreground ,flexoki-themes-bg))))
+
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
      `(completions-annotations
