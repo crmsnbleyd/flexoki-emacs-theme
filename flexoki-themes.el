@@ -232,6 +232,34 @@
      `(match
        ((t (:foreground ,flexoki-themes-lowlight
 	    :background ,flexoki-themes-blue))))
+
+;;;;; Buttons
+     `(custom-button
+       ((t (:foreground
+	    ,flexoki-themes-purple
+	    :background ,flexoki-themes-faint-bg
+	    :box
+	    (:line-width
+	     (2 . 1)
+	     :color nil
+	     :style released-button)))))
+     `(custom-button-mouse
+       ((t (:foreground
+	    ,flexoki-themes-purple
+	    :background ,flexoki-themes-bg
+	    :inherit t
+	    :box
+	    (:line-width
+	     (1 . 1)
+	     :color ,flexoki-themes-lowlight)))))
+     `(custom-button-pressed
+       ((t (:box
+	    (:line-width
+	     (2 . 1)
+	     :color nil
+	     :style pressed-button)
+	    :foreground ,flexoki-themes-purple
+	    :background ,flexoki-themes-lowlight))))
      
 ;;;;; built-in syntax (font-lock)
 
