@@ -621,6 +621,8 @@
        ((t (:foreground ,flexoki-themes-green))))
      `(uiua-noadic-or-constant
        ((t (:foreground ,flexoki-themes-red))))
+     `(uiua-ocean-function
+       ((t (:weight semi-bold))))
 
 ;;;;;; js2-mode
      `(js2-function-call
