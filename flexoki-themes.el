@@ -684,7 +684,13 @@
      `(js2-object-property
        ((t (:foreground ,flexoki-themes-purple))))
      `(js2-object-property-access
-       ((t (:inherit js2-object-property)))))))
+       ((t (:inherit js2-object-property))))
+
+;;;;;; web-mode
+     `(web-mode-string-face ((t (:inherit font-lock-string-face))))
+     `(web-mode-html-tag-face ((t (:inherit font-lock-keyword-face))))
+     `(web-mode-html-tag-bracket-face ((t (:inherit web-mode-html-tag-face))))
+     `(web-mode-html-attr-name-face ((t (:inherit font-lock-type-face)))))))
 
 ;;;###autoload
 (and load-file-name
