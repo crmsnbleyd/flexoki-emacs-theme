@@ -46,8 +46,13 @@
   :group 'flexoki-themes
   :type 'boolean)
 
-(defcustom flexoki-themes-set-italic-keywords t
-  "If t then use italics for keywords."
+(defcustom flexoki-themes-set-bold-keywords nil
+  "If t then use bold weight for keywords."
+  :group 'flexoki-themes
+  :type 'boolean)
+
+(defcustom flexoki-themes-set-bold-builtins nil
+  "If t then use bold weight for font lock builtins."
   :group 'flexoki-themes
   :type 'boolean)
 
@@ -263,10 +268,12 @@
 
 ;;;;; built-in syntax (font-lock)
 
-     `(font-lock-keyword-face
-       ((t (:foreground ,flexoki-themes-magenta :weight bold))))
      `(font-lock-builtin-face
-       ((t (:foreground ,flexoki-themes-green :weight bold))))
+       ((t (:foreground
+	    ,flexoki-themes-green
+	    :weight
+	    ,(if flexoki-themes-set-bold-builtins
+		 'bold 'light)))))
      `(font-lock-constant-face
        ((t (:foreground ,flexoki-themes-purple :weight light))))
      `(font-lock-comment-face
@@ -275,12 +282,13 @@
 			 'italic 'normal)
 	    :weight normal))))
      `(font-lock-function-name-face
-       ((t (:foreground ,flexoki-themes-orange :weight bold))))
+       ((t (:foreground ,flexoki-themes-orange))))
      `(font-lock-keyword-face
-       ((t (:foreground ,flexoki-themes-fg
-		 :weight light
-		 :slant ,(if flexoki-themes-set-italic-keywords
-			     'italic 'normal)))))
+       ((t (:foreground
+	    ,flexoki-themes-magenta
+	    :weight
+	    ,(if flexoki-themes-set-bold-keywords
+		 'bold 'light)))))
      `(font-lock-string-face
        ((t (:foreground ,flexoki-themes-cyan))))
      `(font-lock-variable-name-face
@@ -697,7 +705,9 @@
 ;;;;;; web-mode
      `(web-mode-doctype-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-function-call-face
-       ((t (:inherit font-lock-function-name-face :weight light))))
+       ((t (:inherit font-lock-function-name-face :weight bold))))
+     `(web-mode-function-call-face
+       ((t (:inherit font-lock-function-name-face))))
      `(web-mode-string-face ((t (:foreground ,flexoki-themes-cyan))))
      `(web-mode-html-tag-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-html-tag-bracket-face ((t (:foreground ,flexoki-themes-magenta))))

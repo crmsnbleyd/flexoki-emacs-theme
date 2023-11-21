@@ -9,7 +9,12 @@ Installing using use-package:
 #+begin_src emacs-lisp
   (use-package flexoki-themes
     :ensure t  ;; or :straight t if using straight.el
-    :config (load-theme 'flexoki-themes-light t))
+    :config
+    (load-theme 'flexoki-themes-light t)
+    :custom
+    (flexoki-themes-set-bold-keywords t)
+    (flexoki-themes-set-bold-builtins t)
+    (flexoki-themes-set-italic-comments t))
 #+end_src
 
 ** Contributing
