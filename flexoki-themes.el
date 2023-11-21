@@ -687,10 +687,15 @@
        ((t (:inherit js2-object-property))))
 
 ;;;;;; web-mode
+     `(web-mode-function-call-face
+       ((t (:inherit font-lock-function-name-face :weight light))))
      `(web-mode-string-face ((t (:foreground ,flexoki-themes-cyan))))
      `(web-mode-html-tag-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-html-tag-bracket-face ((t (:foreground ,flexoki-themes-magenta))))
-     `(web-mode-html-attr-name-face ((t (:foreground ,flexoki-themes-orange)))))))
+     `(web-mode-html-attr-name-face ((t (:foreground ,flexoki-themes-orange))))
+     `(web-mode-json-key-face
+       ((t (:inherit font-lock-keyword-face :weight light))))
+     `(web-mode-json-context-face ((t (:inherit font-lock-keyword-face)))))))
 
 ;;;###autoload
 (and load-file-name
