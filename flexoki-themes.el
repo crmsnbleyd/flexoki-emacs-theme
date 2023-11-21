@@ -687,6 +687,7 @@
        ((t (:inherit js2-object-property))))
 
 ;;;;;; web-mode
+     `(web-mode-doctype-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-function-call-face
        ((t (:inherit font-lock-function-name-face :weight light))))
      `(web-mode-string-face ((t (:foreground ,flexoki-themes-cyan))))
