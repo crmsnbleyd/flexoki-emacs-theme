@@ -136,7 +136,7 @@
     (dolist (item flexoki-themes-custom-colours)
       (pcase item
 	(`(,cvar . ,val) (set cvar val))))
-    
+
     (custom-theme-set-faces
      theme-name
      `(default
@@ -260,7 +260,7 @@
 	     :style pressed-button)
 	    :foreground ,flexoki-themes-purple
 	    :background ,flexoki-themes-lowlight))))
-     
+
 ;;;;; built-in syntax (font-lock)
 
      `(font-lock-keyword-face
@@ -395,6 +395,14 @@
        ((t (:foreground ,flexoki-themes-highlight))))
      `(corfu-echo
        ((t (:inherit default))))
+
+;;;;;; Isearch
+     `(isearch
+       ((t (:foreground ,flexoki-themes-bg :background ,flexoki-themes-ultralight))))
+     `(isearch-fail
+       ((t (:background ,flexoki-themes-red))))
+     `(lazy-highlight
+       ((t (:foreground ,flexoki-themes-purple :background ,flexoki-themes-lowlight))))
 
 ;;;;;; Vertico
      `(vertico-current
