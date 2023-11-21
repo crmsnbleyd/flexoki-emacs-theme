@@ -687,6 +687,7 @@
        ((t (:inherit js2-object-property))))
 
 ;;;;;; web-mode
+     `(web-mode-doctype-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-string-face ((t (:foreground ,flexoki-themes-cyan))))
      `(web-mode-html-tag-face ((t (:foreground ,flexoki-themes-orange))))
      `(web-mode-html-tag-bracket-face ((t (:foreground ,flexoki-themes-magenta))))
