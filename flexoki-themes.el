@@ -108,6 +108,9 @@
        (flexoki-themes-faint-bg
 	(if (eq variant 'light)
 	    flexoki-colour-100 flexoki-colour-900))
+       (flexoki-themes-faint-fg
+	(if (eq variant 'light)
+	    flexoki-colour-800 flexoki-colour-300))
        (flexoki-themes-fg
 	(if (eq variant 'light) "#100f0f" "#fffcf0"))
        ;; accents
@@ -222,6 +225,11 @@
 ;;;;; Basic faces
      `(error
        ((t (:foreground ,flexoki-themes-red :bold t))))
+     `(italic
+       ((t (:foreground
+	    ,flexoki-themes-faint-fg
+	    :underline nil
+	    :slant italic))))
      `(success
        ((t (:foreground ,flexoki-themes-green :bold t))))
      `(warning
@@ -272,13 +280,13 @@
        ((t (:foreground
 	    ,flexoki-themes-green
 	    :weight
-	    ,(if flexoki-themes-set-bold-builtins
+	    ,(if flexoki-themes-use-bold-builtins
 		 'bold 'light)))))
      `(font-lock-constant-face
        ((t (:foreground ,flexoki-themes-purple :weight light))))
      `(font-lock-comment-face
        ((t (:foreground ,flexoki-themes-meek
-	    :slant ,(if flexoki-themes-set-italic-comments
+	    :slant ,(if flexoki-themes-use-italic-comments
 			 'italic 'normal)
 	    :weight normal))))
      `(font-lock-function-name-face
@@ -287,7 +295,7 @@
        ((t (:foreground
 	    ,flexoki-themes-magenta
 	    :weight
-	    ,(if flexoki-themes-set-bold-keywords
+	    ,(if flexoki-themes-use-bold-keywords
 		 'bold 'light)))))
      `(font-lock-string-face
        ((t (:foreground ,flexoki-themes-cyan))))
