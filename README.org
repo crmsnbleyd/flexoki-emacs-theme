@@ -12,9 +12,9 @@ Installing using use-package:
     :config
     (load-theme 'flexoki-themes-light t)
     :custom
-    (flexoki-themes-set-bold-keywords t)
-    (flexoki-themes-set-bold-builtins t)
-    (flexoki-themes-set-italic-comments t))
+    (flexoki-themes-use-bold-keywords t)
+    (flexoki-themes-use-bold-builtins t)
+    (flexoki-themes-use-italic-comments t))
 #+end_src
 
 ** Contributing

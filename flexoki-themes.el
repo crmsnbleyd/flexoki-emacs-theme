@@ -41,17 +41,17 @@
   :group 'flexoki-themes
   :type 'symbol)
 
-(defcustom flexoki-themes-set-italic-comments t
+(defcustom flexoki-themes-use-italic-comments t
   "If t then use italics for comments."
   :group 'flexoki-themes
   :type 'boolean)
 
-(defcustom flexoki-themes-set-bold-keywords nil
+(defcustom flexoki-themes-use-bold-keywords nil
   "If t then use bold weight for keywords."
   :group 'flexoki-themes
   :type 'boolean)
 
-(defcustom flexoki-themes-set-bold-builtins nil
+(defcustom flexoki-themes-use-bold-builtins nil
   "If t then use bold weight for font lock builtins."
   :group 'flexoki-themes
   :type 'boolean)
