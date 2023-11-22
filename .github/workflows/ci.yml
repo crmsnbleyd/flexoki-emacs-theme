@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - emacs: 27.1
+            ts: false
+            lint: true
+          - emacs: snapshot
+            ts: true
+            lint: true
+    steps:
+    - uses: purcell/setup-emacs@master
+      with:
+        version: ${{ matrix.emacs }}
+    - uses: actions/checkout@v4
+
+    - name: Install package-lint
+      run: emacs -Q -l .github/workflows/init.el -batch
+                    --eval "(package-install 'package-lint)"
+
+    - name: Lint flexoki-themes
+      run: emacs -Q -l .github/workflows/init.el -batch
+                    -f package-lint-batch-and-exit
+                    flexoki-themes.el
+
+    - name: Byte-compile
+      run: emacs -Q -l .github/workflows/init.el -batch
+                    --eval "(setq byte-compile-error-on-warn t)"
+                    -f batch-byte-compile
+                    *.el
