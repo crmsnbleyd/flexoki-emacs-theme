@@ -414,9 +414,15 @@
 
 ;;;;;; Isearch
      `(isearch
-       ((t (:foreground ,flexoki-themes-bg :background ,flexoki-themes-ultralight))))
+       ((t (:foreground ,flexoki-colour-paper
+	    :background ,flexoki-themes-purple
+	    :weight bold))))
      `(isearch-fail
        ((t (:background ,flexoki-themes-red))))
+     `(isearch-group-1
+       ((t (:background ,flexoki-themes-magenta))))
+     `(isearch-group-2
+       ((t (:background ,flexoki-themes-yellow))))
      `(lazy-highlight
        ((t (:foreground ,flexoki-themes-purple :background ,flexoki-themes-lowlight))))
 
@@ -620,15 +626,11 @@
      `(mode-line
        ((t (:foreground ,flexoki-themes-fg
 	    :background ,flexoki-themes-faint-bg
-	    :box (:line-width 1
-		  :color ,flexoki-themes-highlight
-		  :style nil)))))
+	    :box nil))))
      `(mode-line-inactive
        ((t (:foreground ,flexoki-themes-meek
 	    :background ,flexoki-themes-lowlight
-	    :box (:line-width 1
-		    :color ,flexoki-themes-highlight
-		    :style nil)))))
+	    :box nil))))
 
 ;;;;;; Org-mode
      `(org-block
