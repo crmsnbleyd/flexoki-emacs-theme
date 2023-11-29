@@ -629,7 +629,7 @@
 	    :box nil))))
      `(mode-line-inactive
        ((t (:foreground ,flexoki-themes-meek
-	    :background ,flexoki-themes-lowlight
+	    :background ,flexoki-themes-bg
 	    :box nil))))
 
 ;;;;;; Org-mode
