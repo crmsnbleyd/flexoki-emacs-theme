@@ -660,6 +660,84 @@
      `(dired-symlink
        ((t (:foreground ,flexoki-themes-purple :weight bold))))
 
+;;;;;; Term
+     `(term
+       ((t (:foreground
+	    ,flexoki-themes-fg
+	    :background ,flexoki-themes-bg))))
+     `(term-bold
+       ((t  (:weight bold))))
+     `(term-color-black
+       ((t  (:background
+	     ,flexoki-colour-black
+	     :foreground ,flexoki-colour-black))))
+     `(term-color-red
+       ((t  (:background
+	     ,flexoki-themes-red
+	     :foreground ,flexoki-themes-red))))
+     `(term-color-green
+       ((t  (:background
+	     ,flexoki-themes-green
+	     :foreground ,flexoki-themes-green))))
+     `(term-color-yellow
+       ((t  (:background
+	     ,flexoki-themes-yellow
+	     :foreground ,flexoki-themes-yellow))))
+     `(term-color-blue
+       ((t  (:background
+	     ,flexoki-themes-blue
+	     :foreground ,flexoki-themes-blue))))
+     `(term-color-magenta
+       ((t  (:background
+	     ,flexoki-themes-magenta
+	     :foreground ,flexoki-themes-magenta))))
+     `(term-color-cyan
+       ((t  (:background
+	     ,flexoki-themes-cyan
+	     :foreground ,flexoki-themes-cyan))))
+     `(term-color-white
+       ((t  (:background
+	     ,flexoki-colour-paper
+	     :foreground ,flexoki-colour-paper))))
+
+;;;;;; Vterm
+     `(vterm
+       ((t (:foreground
+	    ,flexoki-themes-fg
+	    :background ,flexoki-themes-bg))))
+     `(vterm-color-black
+       ((t  (:background
+	     ,flexoki-colour-black
+	     :foreground ,flexoki-colour-black))))
+     `(vterm-color-red
+       ((t  (:background
+	     ,flexoki-themes-red
+	     :foreground ,flexoki-themes-red))))
+     `(vterm-color-green
+       ((t  (:background
+	     ,flexoki-themes-green
+	     :foreground ,flexoki-themes-green))))
+     `(vterm-color-yellow
+       ((t  (:background
+	     ,flexoki-themes-yellow
+	     :foreground ,flexoki-themes-yellow))))
+     `(vterm-color-blue
+       ((t  (:background
+	     ,flexoki-themes-blue
+	     :foreground ,flexoki-themes-blue))))
+     `(vterm-color-magenta
+       ((t  (:background
+	     ,flexoki-themes-magenta
+	     :foreground ,flexoki-themes-magenta))))
+     `(vterm-color-cyan
+       ((t  (:background
+	     ,flexoki-themes-cyan
+	     :foreground ,flexoki-themes-cyan))))
+     `(vterm-color-white
+       ((t  (:background
+	     ,flexoki-colour-paper
+	     :foreground ,flexoki-colour-paper))))
+
 ;;;;;; Eshell
      `(eshell-prompt
        ((t (:foreground ,flexoki-themes-yellow))))
