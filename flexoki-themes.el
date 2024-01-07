@@ -613,7 +613,7 @@
      `(markdown-markup-face
        ((t (:foreground ,flexoki-themes-lowlight))))
      `(markdown-italic-face
-       ((t (:foreground ,flexoki-themes-purple))))
+       ((t (:foreground ,flexoki-themes-orange))))
      `(markdown-html-tag-delimiter-face
        ((t (:inherit 'default))))
 
