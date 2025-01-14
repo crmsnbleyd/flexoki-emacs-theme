@@ -246,36 +246,7 @@
        ((t (:foreground ,flexoki-themes-lowlight
 	    :background ,flexoki-themes-blue))))
 
-;;;;; Buttons
-     `(custom-button
-       ((t (:foreground
-	    ,flexoki-themes-purple
-	    :background ,flexoki-themes-faint-bg
-	    :box
-	    (:line-width
-	     (2 . 1)
-	     :color nil
-	     :style released-button)))))
-     `(custom-button-mouse
-       ((t (:foreground
-	    ,flexoki-themes-purple
-	    :background ,flexoki-themes-bg
-	    :inherit t
-	    :box
-	    (:line-width
-	     (1 . 1)
-	     :color ,flexoki-themes-lowlight)))))
-     `(custom-button-pressed
-       ((t (:box
-	    (:line-width
-	     (2 . 1)
-	     :color nil
-	     :style pressed-button)
-	    :foreground ,flexoki-themes-purple
-	    :background ,flexoki-themes-lowlight))))
-
 ;;;;; built-in syntax (font-lock)
-
      `(font-lock-builtin-face
        ((t (:foreground
 	    ,flexoki-themes-green
@@ -308,31 +279,87 @@
      `(font-lock-preprocessor-face
        ((t (:foreground ,flexoki-themes-fg :weight medium))))
 
-;;;;; Childframes
-;;;;;; Mini-Frame
-     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
-     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
+;;;;; more built-in faces
+;;;;; Buttons
+     `(custom-button
+       ((t (:foreground
+	    ,flexoki-themes-purple
+	    :background ,flexoki-themes-faint-bg
+	    :box
+	    (:line-width
+	     (2 . 1)
+	     :color nil
+	     :style released-button)))))
+     `(custom-button-mouse
+       ((t (:foreground
+	    ,flexoki-themes-purple
+	    :background ,flexoki-themes-bg
+	    :inherit t
+	    :box
+	    (:line-width
+	     (1 . 1)
+	     :color ,flexoki-themes-lowlight)))))
+     `(custom-button-pressed
+       ((t (:box
+	    (:line-width
+	     (2 . 1)
+	     :color nil
+	     :style pressed-button)
+	    :foreground ,flexoki-themes-purple
+	    :background ,flexoki-themes-lowlight))))
 
-;;;;;; Mini-Popup (Childframe)
-     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
-     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
+;;;;;; Comint
+     `(comint-highlight-prompt
+       ((t (:foreground ,flexoki-themes-yellow
+	    :weight semi-bold))))
 
-;;;;;; Posframe
-     `(which-key-posframe
-       ((t (:background ,flexoki-themes-faint-bg))))
-     `(which-key-posframe-border
-       ((t (:background ,flexoki-themes-faint-bg))))
-     `(transient-posframe-border
-       ((t (:background ,flexoki-themes-faint-bg))))
-     `(transient-posframe
-       ((t (:foreground ,flexoki-themes-highlight
-	    :background ,flexoki-themes-faint-bg))))
+;;;;;; Dired
+     `(dired-symlink
+       ((t (:foreground ,flexoki-themes-purple :weight bold))))
 
-;;;;; Line number
+;;;;;; Eshell
+     `(eshell-prompt
+       ((t (:foreground ,flexoki-themes-yellow))))
+     `(eshell-ls-archive
+       ((t (:foreground ,flexoki-themes-meek))))
+     `(eshell-ls-backup
+       ((t (:foreground ,flexoki-themes-meek))))
+     `(eshell-ls-clutter
+       ((t (:foreground ,flexoki-themes-orange :weight bold))))
+     `(eshell-ls-directory
+       ((t (:foreground ,flexoki-themes-blue :weight bold))))
+     `(eshell-ls-executable
+       ((t (:weight bold))))
+     `(eshell-ls-missing
+       ((t (:foreground ,flexoki-themes-red :bold t))))
+     `(eshell-ls-product
+       ((t (:foreground ,flexoki-themes-red))))
+     `(eshell-ls-readonly
+       ((t (:background ,flexoki-themes-highlight
+	    :foreground ,flexoki-themes-meek
+	    :weight light))))
+     `(eshell-ls-special
+       ((t (:foreground ,flexoki-themes-yellow :bold t))))
+     `(eshell-ls-symlink
+       ((t (:foreground ,flexoki-themes-red))))
+     `(eshell-ls-unreadable
+       ((t (:foreground ,flexoki-themes-red :bold t))))
+
+;;;;;; Line number
      `(line-number
        ((t (:inherit 'default :foreground ,flexoki-themes-lowlight))))
      `(line-number-current-line
        ((t (:inherit line-number :foreground ,flexoki-themes-purple))))
+
+;;;;;; Modeline
+     `(mode-line
+       ((t (:foreground ,flexoki-themes-fg
+	    :background ,flexoki-themes-faint-bg
+	    :box nil))))
+     `(mode-line-inactive
+       ((t (:foreground ,flexoki-themes-meek
+	    :background ,flexoki-themes-bg
+	    :box nil))))
 
 ;;;;; tab-bar
      `(tab-bar ((t (:height 1.1 :foreground ,flexoki-themes-fg :background ,flexoki-themes-bg))))
@@ -359,6 +386,104 @@
        ((t (:inherit tab-line-tab
 	    :background ,flexoki-themes-lowlight
 	    :foreground ,flexoki-themes-bg))))
+
+;;;;;; Term
+     `(term
+       ((t (:foreground
+	    ,flexoki-themes-fg
+	    :background ,flexoki-themes-bg))))
+     `(term-bold
+       ((t  (:weight bold))))
+     `(term-color-black
+       ((t  (:background
+	     ,flexoki-colour-black
+	     :foreground ,flexoki-colour-black))))
+     `(term-color-red
+       ((t  (:background
+	     ,flexoki-themes-red
+	     :foreground ,flexoki-themes-red))))
+     `(term-color-green
+       ((t  (:background
+	     ,flexoki-themes-green
+	     :foreground ,flexoki-themes-green))))
+     `(term-color-yellow
+       ((t  (:background
+	     ,flexoki-themes-yellow
+	     :foreground ,flexoki-themes-yellow))))
+     `(term-color-blue
+       ((t  (:background
+	     ,flexoki-themes-blue
+	     :foreground ,flexoki-themes-blue))))
+     `(term-color-magenta
+       ((t  (:background
+	     ,flexoki-themes-magenta
+	     :foreground ,flexoki-themes-magenta))))
+     `(term-color-cyan
+       ((t  (:background
+	     ,flexoki-themes-cyan
+	     :foreground ,flexoki-themes-cyan))))
+     `(term-color-white
+       ((t  (:background
+	     ,flexoki-colour-paper
+	     :foreground ,flexoki-colour-paper))))
+
+;;;;;; Vterm
+     `(vterm
+       ((t (:foreground
+	    ,flexoki-themes-fg
+	    :background ,flexoki-themes-bg))))
+     `(vterm-color-black
+       ((t  (:background
+	     ,flexoki-colour-black
+	     :foreground ,flexoki-colour-black))))
+     `(vterm-color-red
+       ((t  (:background
+	     ,flexoki-themes-red
+	     :foreground ,flexoki-themes-red))))
+     `(vterm-color-green
+       ((t  (:background
+	     ,flexoki-themes-green
+	     :foreground ,flexoki-themes-green))))
+     `(vterm-color-yellow
+       ((t  (:background
+	     ,flexoki-themes-yellow
+	     :foreground ,flexoki-themes-yellow))))
+     `(vterm-color-blue
+       ((t  (:background
+	     ,flexoki-themes-blue
+	     :foreground ,flexoki-themes-blue))))
+     `(vterm-color-magenta
+       ((t  (:background
+	     ,flexoki-themes-magenta
+	     :foreground ,flexoki-themes-magenta))))
+     `(vterm-color-cyan
+       ((t  (:background
+	     ,flexoki-themes-cyan
+	     :foreground ,flexoki-themes-cyan))))
+     `(vterm-color-white
+       ((t  (:background
+	     ,flexoki-colour-paper
+	     :foreground ,flexoki-colour-paper))))
+
+;;;;; Childframes
+;;;;;; Mini-Frame
+     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
+     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
+
+;;;;;; Mini-Popup (Childframe)
+     `(mini-popup-background ((t (:background ,flexoki-themes-faint-bg))))
+     `(mini-popup-border     ((t (:background ,flexoki-themes-faint-bg))))
+
+;;;;;; Posframe
+     `(which-key-posframe
+       ((t (:background ,flexoki-themes-faint-bg))))
+     `(which-key-posframe-border
+       ((t (:background ,flexoki-themes-faint-bg))))
+     `(transient-posframe-border
+       ((t (:background ,flexoki-themes-faint-bg))))
+     `(transient-posframe
+       ((t (:foreground ,flexoki-themes-highlight
+	    :background ,flexoki-themes-faint-bg))))
 
 ;;;;; Completion/Narrowing
 ;;;;;; General Completion
@@ -522,36 +647,7 @@
      `(magit-section-highlight
        ((t (:background ,flexoki-themes-lowlight :extend t))))
 
-;;;;;; Rainbow delimiters
-     `(rainbow-delimiters-depth-1-face
-       ((t (:foreground ,flexoki-themes-blue))))
-     `(rainbow-delimiters-depth-2-face
-       ((t (:foreground ,flexoki-themes-orange))))
-     `(rainbow-delimiters-depth-3-face
-       ((t (:foreground ,flexoki-themes-purple))))
-     `(rainbow-delimiters-depth-4-face
-       ((t (:foreground ,flexoki-themes-yellow))))
-     `(rainbow-delimiters-depth-5-face
-       ((t (:foreground ,flexoki-themes-cyan))))
-     `(rainbow-delimiters-depth-6-face
-       ((t (:foreground ,flexoki-themes-magenta))))
-     `(rainbow-delimiters-depth-7-face
-       ((t (:inherit rainbow-delimiters-depth-1-face))))
-     `(rainbow-delimiters-depth-8-face
-       ((t (:inherit rainbow-delimiters-depth-2-face))))
-     `(rainbow-delimiters-depth-9-face
-       ((t (:inherit rainbow-delimiters-depth-3-face))))
-     `(rainbow-delimiters-depth-10-face
-       ((t (:inherit rainbow-delimiters-depth-4-face))))
-     `(rainbow-delimiters-depth-11-face
-       ((t (:inherit rainbow-delimiters-depth-5-face))))
-     `(rainbow-delimiters-depth-12-face
-       ((t (:inherit rainbow-delimiters-depth-6-face))))
-     `(rainbow-delimiters-unmatched-face
-       ((t (:background ,flexoki-themes-bg
-	    :foreground ,flexoki-themes-red
-	    :weight bold))))
-
+;;;;; light-weight markup
 ;;;;;; Outline
      `(outline-minor-0
        ((t (:background ,flexoki-themes-lowlight :height 1.1))))
@@ -617,21 +713,6 @@
      `(markdown-html-tag-delimiter-face
        ((t (:inherit 'default))))
 
-;;;;;; Comint
-     `(comint-highlight-prompt
-       ((t (:foreground ,flexoki-themes-yellow
-	    :weight semi-bold))))
-
-;;;;;; Modeline
-     `(mode-line
-       ((t (:foreground ,flexoki-themes-fg
-	    :background ,flexoki-themes-faint-bg
-	    :box nil))))
-     `(mode-line-inactive
-       ((t (:foreground ,flexoki-themes-meek
-	    :background ,flexoki-themes-bg
-	    :box nil))))
-
 ;;;;;; Org-mode
      `(org-block
        ((t (:inherit 'default :background ,flexoki-themes-faint-bg))))
@@ -656,115 +737,59 @@
      `(org-document-title
        ((t (:inherit org-document-info :weight bold))))
 
-;;;;;; Dired
-     `(dired-symlink
-       ((t (:foreground ,flexoki-themes-purple :weight bold))))
-
-;;;;;; Term
-     `(term
-       ((t (:foreground
-	    ,flexoki-themes-fg
-	    :background ,flexoki-themes-bg))))
-     `(term-bold
-       ((t  (:weight bold))))
-     `(term-color-black
-       ((t  (:background
-	     ,flexoki-colour-black
-	     :foreground ,flexoki-colour-black))))
-     `(term-color-red
-       ((t  (:background
-	     ,flexoki-themes-red
-	     :foreground ,flexoki-themes-red))))
-     `(term-color-green
-       ((t  (:background
-	     ,flexoki-themes-green
-	     :foreground ,flexoki-themes-green))))
-     `(term-color-yellow
-       ((t  (:background
-	     ,flexoki-themes-yellow
-	     :foreground ,flexoki-themes-yellow))))
-     `(term-color-blue
-       ((t  (:background
-	     ,flexoki-themes-blue
-	     :foreground ,flexoki-themes-blue))))
-     `(term-color-magenta
-       ((t  (:background
-	     ,flexoki-themes-magenta
-	     :foreground ,flexoki-themes-magenta))))
-     `(term-color-cyan
-       ((t  (:background
-	     ,flexoki-themes-cyan
-	     :foreground ,flexoki-themes-cyan))))
-     `(term-color-white
-       ((t  (:background
-	     ,flexoki-colour-paper
-	     :foreground ,flexoki-colour-paper))))
-
-;;;;;; Vterm
-     `(vterm
-       ((t (:foreground
-	    ,flexoki-themes-fg
-	    :background ,flexoki-themes-bg))))
-     `(vterm-color-black
-       ((t  (:background
-	     ,flexoki-colour-black
-	     :foreground ,flexoki-colour-black))))
-     `(vterm-color-red
-       ((t  (:background
-	     ,flexoki-themes-red
-	     :foreground ,flexoki-themes-red))))
-     `(vterm-color-green
-       ((t  (:background
-	     ,flexoki-themes-green
-	     :foreground ,flexoki-themes-green))))
-     `(vterm-color-yellow
-       ((t  (:background
-	     ,flexoki-themes-yellow
-	     :foreground ,flexoki-themes-yellow))))
-     `(vterm-color-blue
-       ((t  (:background
-	     ,flexoki-themes-blue
-	     :foreground ,flexoki-themes-blue))))
-     `(vterm-color-magenta
-       ((t  (:background
-	     ,flexoki-themes-magenta
-	     :foreground ,flexoki-themes-magenta))))
-     `(vterm-color-cyan
-       ((t  (:background
-	     ,flexoki-themes-cyan
-	     :foreground ,flexoki-themes-cyan))))
-     `(vterm-color-white
-       ((t  (:background
-	     ,flexoki-colour-paper
-	     :foreground ,flexoki-colour-paper))))
-
-;;;;;; Eshell
-     `(eshell-prompt
-       ((t (:foreground ,flexoki-themes-yellow))))
-     `(eshell-ls-archive
-       ((t (:foreground ,flexoki-themes-meek))))
-     `(eshell-ls-backup
-       ((t (:foreground ,flexoki-themes-meek))))
-     `(eshell-ls-clutter
-       ((t (:foreground ,flexoki-themes-orange :weight bold))))
-     `(eshell-ls-directory
+;;;;; Other Packages
+;;;;;; Neotree
+     `(neo-banner-face
+       ((t (:foreground ,flexoki-themes-magenta))))
+     `(neo-dir-link-face
        ((t (:foreground ,flexoki-themes-blue :weight bold))))
-     `(eshell-ls-executable
-       ((t (:weight bold))))
-     `(eshell-ls-missing
-       ((t (:foreground ,flexoki-themes-red :bold t))))
-     `(eshell-ls-product
+     `(neo-root-dir-face
+       ((t (:foreground ,flexoki-themes-cyan :weight bold))))
+     `(neo-vc-added-face
+       ((t (:foreground ,flexoki-themes-green))))
+    `(neo-vc-edited-face
+       ((t (:foreground ,flexoki-themes-orange))))
+    `(neo-vc-missing-face
        ((t (:foreground ,flexoki-themes-red))))
-     `(eshell-ls-readonly
-       ((t (:background ,flexoki-themes-highlight
-	    :foreground ,flexoki-themes-meek
-	    :weight light))))
-     `(eshell-ls-special
-       ((t (:foreground ,flexoki-themes-yellow :bold t))))
-     `(eshell-ls-symlink
-       ((t (:foreground ,flexoki-themes-red))))
-     `(eshell-ls-unreadable
-       ((t (:foreground ,flexoki-themes-red :bold t))))
+
+;;;;;; Rainbow delimiters
+     `(rainbow-delimiters-depth-1-face
+       ((t (:foreground ,flexoki-themes-blue))))
+     `(rainbow-delimiters-depth-2-face
+       ((t (:foreground ,flexoki-themes-orange))))
+     `(rainbow-delimiters-depth-3-face
+       ((t (:foreground ,flexoki-themes-purple))))
+     `(rainbow-delimiters-depth-4-face
+       ((t (:foreground ,flexoki-themes-yellow))))
+     `(rainbow-delimiters-depth-5-face
+       ((t (:foreground ,flexoki-themes-cyan))))
+     `(rainbow-delimiters-depth-6-face
+       ((t (:foreground ,flexoki-themes-magenta))))
+     `(rainbow-delimiters-depth-7-face
+       ((t (:inherit rainbow-delimiters-depth-1-face))))
+     `(rainbow-delimiters-depth-8-face
+       ((t (:inherit rainbow-delimiters-depth-2-face))))
+     `(rainbow-delimiters-depth-9-face
+       ((t (:inherit rainbow-delimiters-depth-3-face))))
+     `(rainbow-delimiters-depth-10-face
+       ((t (:inherit rainbow-delimiters-depth-4-face))))
+     `(rainbow-delimiters-depth-11-face
+       ((t (:inherit rainbow-delimiters-depth-5-face))))
+     `(rainbow-delimiters-depth-12-face
+       ((t (:inherit rainbow-delimiters-depth-6-face))))
+     `(rainbow-delimiters-unmatched-face
+       ((t (:background ,flexoki-themes-bg
+	    :foreground ,flexoki-themes-red
+	    :weight bold))))
+
+;;;;; Programming modes
+;;;;;; js2-mode
+     `(js2-function-call
+       ((t (:foreground ,flexoki-themes-green))))
+     `(js2-object-property
+       ((t (:foreground ,flexoki-themes-purple))))
+     `(js2-object-property-access
+       ((t (:inherit js2-object-property))))
 
 ;;;;;; Shell script
      `(sh-quoted-exec
@@ -781,14 +806,6 @@
        ((t (:foreground ,flexoki-themes-red))))
      `(uiua-ocean-function
        ((t (:weight semi-bold))))
-
-;;;;;; js2-mode
-     `(js2-function-call
-       ((t (:foreground ,flexoki-themes-green))))
-     `(js2-object-property
-       ((t (:foreground ,flexoki-themes-purple))))
-     `(js2-object-property-access
-       ((t (:inherit js2-object-property))))
 
 ;;;;;; web-mode
      `(web-mode-doctype-face ((t (:foreground ,flexoki-themes-orange))))
