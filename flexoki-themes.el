@@ -738,6 +738,20 @@
        ((t (:inherit org-document-info :weight bold))))
 
 ;;;;; Other Packages
+;;;;;; Neotree
+     `(neo-banner-face
+       ((t (:foreground ,flexoki-themes-magenta))))
+     `(neo-dir-link-face
+       ((t (:foreground ,flexoki-themes-blue :weight bold))))
+     `(neo-root-dir-face
+       ((t (:foreground ,flexoki-themes-cyan :weight bold))))
+     `(neo-vc-added-face
+       ((t (:foreground ,flexoki-themes-green))))
+    `(neo-vc-edited-face
+       ((t (:foreground ,flexoki-themes-orange))))
+    `(neo-vc-missing-face
+       ((t (:foreground ,flexoki-themes-red))))
+
 ;;;;;; Rainbow delimiters
      `(rainbow-delimiters-depth-1-face
        ((t (:foreground ,flexoki-themes-blue))))
